@@ -8,5 +8,81 @@
 		<link rel="stylesheet" href="/styles.css" />
 		<script src="/script.js" defer></script>
 	</head>
-	<body></body>
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="header__panel">
+					<div class="header__row header__row--upper">
+						<a href="/" class="header__logo">
+							<img
+								src="./images/logo-header.png"
+								alt="Company logo"
+								class="header__logo-image"
+							/>
+						</a>
+						<div class="header__info">
+							<div class="header__info-col">
+								<svg class="header__info-icon">
+									<use href="./icons/icon-sprite.svg#time"></use>
+								</svg>
+							</div>
+							<div class="header__info-col">
+								<div class="header__info-title">Service hours</div>
+								<div class="header__info-description">
+									Mon - Sat: 7:00 am - 6:00 pm
+								</div>
+							</div>
+						</div>
+						<div class="header__info">
+							<div class="header__info-col">
+								<svg class="header__info-icon">
+									<use href="./icons/icon-sprite.svg#phone"></use>
+								</svg>
+							</div>
+							<div class="header__info-col">
+								<div class="header__info-title">Call us</div>
+								<div class="header__info-description">(555) Car-Repair</div>
+							</div>
+						</div>
+						<button class="header__panel-button button">
+							<span class="button__text">Make an Appointment</span>
+							<svg class="button__icon">
+								<use href="./icons/icon-sprite.svg#arrow-forward"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="header__row header__row--lower">
+						<nav class="header__menu">
+							<button class="header__dropdown-button">Services</button>
+							<a href="/" class="header__link">Specials</a>
+							<a href="/" class="header__link">Estimates</a>
+							<a href="/" class="header__link">Reviews</a>
+							<button class="header__dropdown-button">Shop</button>
+							<a href="/" class="header__link">About</a>
+						</nav>
+						<button class="header__icon-button icon-button" aria-label="Search">
+							<svg class="icon-button__icon">
+								<use href="./icons/icon-sprite.svg#search"></use>
+							</svg>
+						</button>
+						<button class="header__icon-button icon-button" aria-label="Cart">
+							<svg class="icon-button__icon">
+								<use href="./icons/icon-sprite.svg#cart"></use>
+							</svg>
+							<div class="header__cart-badge badge">2</div>
+						</button>
+					</div>
+				</div>
+				<h1 class="header__heading">
+					Top notch service is our main auto motive
+				</h1>
+				<button class="header__button button">
+					<span class="button__text">Make an Appointment</span>
+					<svg class="button__icon">
+						<use href="./icons/icon-sprite.svg#arrow-forward"></use>
+					</svg>
+				</button>
+			</div>
+		</header>
+	</body>
 </html>

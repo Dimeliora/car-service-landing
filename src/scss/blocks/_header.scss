@@ -1,0 +1,139 @@
+.header {
+	min-height: 100vh;
+	padding-top: 25px;
+	background: $font-dark url("./images/bg-header.jpg") no-repeat center / cover;
+	color: #fff;
+
+	&__row {
+		display: flex;
+		align-items: center;
+
+		&--upper {
+			margin-bottom: 30px;
+		}
+
+		&--lower {
+			height: 60px;
+			padding: 0 40px;
+			background-color: #fff;
+		}
+	}
+
+	&__logo {
+		display: block;
+		width: 175px;
+		margin-right: auto;
+	}
+
+	&__logo-image {
+		display: block;
+		width: 100%;
+	}
+
+	&__info {
+		display: flex;
+		margin-right: 35px;
+		font-size: 1.2rem;
+		font-weight: 700;
+	}
+
+	&__info-col {
+		&:first-child {
+			margin-right: 12px;
+		}
+	}
+
+	&__info-icon {
+		width: 20px;
+		height: 20px;
+	}
+
+	&__info-title {
+		margin-bottom: 10px;
+		text-transform: uppercase;
+	}
+
+	&__menu {
+		margin-right: auto;
+	}
+
+	&__dropdown-button {
+		position: relative;
+		padding: 0;
+		border: none;
+		margin-right: 55px;
+		background-color: transparent;
+		color: $font-dark;
+		font-size: 1.4rem;
+		font-weight: 700;
+		cursor: pointer;
+		transition: color 0.2s ease-out;
+
+		&:focus,
+		&:hover {
+			outline: none;
+			color: $red-dark;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: -15px;
+			transform: translateY(-50%);
+			display: block;
+			width: 8px;
+			height: 5px;
+			background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgOCA2IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNNy4wNiAwLjUyOTk5OUw0IDMuNTgzMzNMMC45NCAwLjUyOTk5OUwwIDEuNDdMNCA1LjQ3TDggMS40N0w3LjA2IDAuNTI5OTk5WiIgZmlsbD0iI0M0MEIwQiIvPgo8L3N2Zz4K");
+		}
+	}
+
+	&__link {
+		margin-right: 40px;
+		color: $font-dark;
+		font-size: 1.4rem;
+		font-weight: 700;
+		text-decoration: none;
+		transition: color 0.2s ease-out;
+
+		&:focus,
+		&:hover {
+			outline: none;
+			color: $red-dark;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__icon-button {
+		margin-right: 25px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__cart-badge {
+		position: absolute;
+		top: -8px;
+		right: -8px;
+	}
+
+	&__heading {
+		max-width: 580px;
+		margin-top: 125px;
+		font-size: 5.6rem;
+		font-weight: 900;
+		line-height: 1;
+	}
+
+	&__button {
+		margin-top: 50px;
+	}
+}

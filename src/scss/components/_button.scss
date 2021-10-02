@@ -1,0 +1,49 @@
+.button {
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding: 12px 50px 12px 20px;
+	background: $red-dark;
+	border: none;
+	cursor: pointer;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 43px;
+		height: 100%;
+		display: block;
+		background: $red;
+		clip-path: polygon(43% 0, 100% 0, 100% 100%, 0% 100%);
+		transition: width 0.3s ease-out, clip-path 0.3s ease-out;
+	}
+
+	&__text {
+		position: relative;
+		z-index: 10;
+		color: #fff;
+		font-size: 1.2rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.15px;
+	}
+
+	&__icon {
+		position: absolute;
+		top: 50%;
+		right: 11px;
+		z-index: 10;
+		transform: translateY(-50%);
+		width: 12px;
+		height: 12px;
+	}
+
+	&:hover {
+		&::after {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+			width: 100%;
+		}
+	}
+}
