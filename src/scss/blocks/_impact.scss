@@ -1,0 +1,75 @@
+.impact {
+	padding: 110px 0 210px;
+	background: $font-dark url("./images/bg-impact.webp") no-repeat center / 100%;
+
+	&__wrapper {
+		position: relative;
+	}
+
+	&__image {
+		position: absolute;
+		top: -62%;
+		right: 0;
+		display: block;
+		max-width: 500px;
+	}
+
+	&__subheading {
+		max-width: 410px;
+		margin-top: 30px;
+		color: #fff;
+	}
+
+	&__stats {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: 25px;
+		margin-top: 80px;
+	}
+
+	&__appointment {
+		position: absolute;
+		left: 0;
+		bottom: -69%;
+		transform: translateY(50%);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		padding: 45px 70px;
+		background-color: #fff;
+	}
+
+	&__appointment-text {
+		max-width: 560px;
+		color: $font-dark;
+		font-size: 2.4rem;
+		font-weight: 900;
+		line-height: 3rem;
+	}
+
+	&-item {
+		display: flex;
+
+		&__image {
+			margin-right: 12px;
+		}
+
+		&__icon {
+			width: 76px;
+			height: 76px;
+		}
+
+		&__value {
+			color: $red-dark;
+			font-size: 3.6rem;
+			font-weight: 900;
+		}
+
+		&__description {
+			margin-top: 5px;
+			color: $gray-light;
+			line-height: 2.4rem;
+		}
+	}
+}

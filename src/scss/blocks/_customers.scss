@@ -1,0 +1,13 @@
+.customers {
+	padding-bottom: 210px;
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 25px;
+	}
+
+	&__subheading {
+		margin-top: 35px;
+	}
+}
