@@ -1,0 +1,101 @@
+.gallery {
+	margin-top: -75px;
+	padding-bottom: 240px;
+	background: url("./images/bg-gears-bottom.webp") no-repeat 0% 100% / 45%;
+
+	&__wrapper {
+		max-height: 700px;
+		padding: 100px 85px 0;
+		background-color: #fff;
+	}
+
+	&__subheading {
+		margin-top: 30px;
+	}
+
+	&__tabs {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 50px;
+		padding: 0 15px 12px 15px;
+		border-bottom: 1px solid #d5d5d5;
+		list-style-type: none;
+	}
+
+	&__tab-item {
+		position: relative;
+
+		&--stream {
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 10px;
+				display: block;
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				background-color: #d5d5d5;
+			}
+		}
+
+		&--online {
+			&::before {
+				background-color: $green;
+			}
+		}
+	}
+
+	&__tab-button {
+		padding: 5px 20px;
+		border: none;
+		background-color: transparent;
+		cursor: pointer;
+
+		&--active {
+			--left-offset: 0px;
+			--width-value: 170px;
+			position: relative;
+			color: $red-dark;
+			font-weight: 700;
+
+			&::after {
+				content: "";
+				position: absolute;
+				left: var(--left-offset);
+				bottom: -14px;
+				width: var(--width-value);
+				height: 4px;
+				background-color: $red-dark;
+			}
+		}
+	}
+
+	&__view {
+		margin-top: 50px;
+
+		&--live {
+			position: relative;
+
+			&::before {
+				content: "Live";
+				position: absolute;
+				top: 30px;
+				right: 30px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 50px;
+				height: 30px;
+				background-color: $green;
+				color: #fff;
+				font-size: 1.6rem;
+			}
+		}
+	}
+
+	&__image {
+		display: block;
+		width: 100%;
+	}
+}

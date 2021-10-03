@@ -1,0 +1,90 @@
+.appointment {
+	padding: 130px 0 210px;
+	background: url("./images/bg-gears-top.webp") no-repeat 100% 0% / 45%,
+		url("./images/bg-gears-bottom.webp") no-repeat 0% 100% / 45%, $font-dark;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	&__form-wrapper {
+		margin-right: 110px;
+		padding: 75px 55px;
+		background-color: #fff;
+	}
+
+	&__heading {
+		color: $font-dark;
+		font-size: 3.6rem;
+		font-weight: 900;
+		line-height: 4.2rem;
+		text-align: center;
+	}
+
+	&__form {
+		margin-top: 50px;
+	}
+
+	&__form-fields {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 48px) 180px;
+		gap: 22px;
+	}
+
+	&__form-input,
+	&__form-select,
+	&__form-textarea {
+		padding: 17px 23px 15px;
+		border: none;
+		background-color: $gray-light;
+		color: #959595;
+
+		&:focus {
+			outline-color: $red-dark;
+		}
+	}
+
+	&__form-select {
+		appearance: none;
+		cursor: pointer;
+
+		option {
+			cursor: pointer;
+		}
+	}
+
+	&__form-textarea {
+		grid-column: 1 / 3;
+		resize: none;
+	}
+
+	&__form-button {
+		margin-top: 30px;
+		margin-left: auto;
+	}
+
+	&__counter {
+		color: #fff;
+		font-weight: 900;
+		text-align: center;
+	}
+
+	&__counter-title {
+		font-size: 3rem;
+		line-height: 3.6rem;
+	}
+
+	&__counter-value {
+		margin-top: 40px;
+		font-size: 9.6rem;
+		color: $red-dark;
+	}
+
+	&__counter-description {
+		margin-top: 40px;
+		font-size: 1.9rem;
+		line-height: 2.6rem;
+	}
+}
