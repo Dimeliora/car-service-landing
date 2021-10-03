@@ -56,11 +56,6 @@
 							<span class="button__text"
 								>Make an Appointment</span
 							>
-							<svg class="button__icon">
-								<use
-									href="./icons/icon-sprite.svg#arrow-forward"
-								></use>
-							</svg>
 						</button>
 					</div>
 					<div class="header__row header__row--lower">
@@ -102,9 +97,6 @@
 				</h1>
 				<button class="header__button button">
 					<span class="button__text">Make an Appointment</span>
-					<svg class="button__icon">
-						<use href="./icons/icon-sprite.svg#arrow-forward"></use>
-					</svg>
 				</button>
 			</div>
 		</header>
@@ -129,7 +121,13 @@
 							pariatur.
 						</p>
 						<picture>
-							<source />
+							<source
+								srcset="
+									./images/about@1x.webp,
+									./images/about@2x.webp 2x
+								"
+								type="image/webp"
+							/>
 							<img
 								src="./images/about@1x.jpg"
 								srcset="./images/about@2x.jpg 2x"
@@ -208,6 +206,126 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</section>
+
+			<section class="video">
+				<div class="container">
+					<div class="video__wrapper">
+						<h2 class="video__heading">
+							Nemo enim ipsam voluptatem quia voluptas in proident
+						</h2>
+						<button
+							class="video__play-button"
+							aria-label="Video play button"
+						>
+							<svg class="video__play-icon">
+								<use
+									href="./icons/icon-sprite.svg#arrow-play"
+								></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</section>
+
+			<section class="services">
+				<div class="container">
+					<h2 class="services__heading section-heading">
+						Our services
+					</h2>
+					<div class="services__subheading section-subheading">
+						Sed perspiciatis omnis iste natus
+					</div>
+					<div class="services__items">
+						<div class="services-card">
+							<svg class="services-card__icon">
+								<use
+									href="/icons/icon-sprite.svg#car-bay"
+								></use>
+							</svg>
+							<h3 class="services-card__title">
+								Multi Point Inspections
+							</h3>
+							<p class="services-card__text">
+								At vero eos et accusamus et iusto odio
+								dignissimos ducimus qui blanditiis praesentium
+								corrupti quos dolores et quas.
+							</p>
+						</div>
+						<div class="services-card">
+							<svg class="services-card__icon">
+								<use
+									href="/icons/icon-sprite.svg#car-engine"
+								></use>
+							</svg>
+							<h3 class="services-card__title">Auto Repair</h3>
+							<p class="services-card__text">
+								At vero eos et accusamus et iusto odio
+								dignissimos ducimus qui blanditiis praesentium
+								corrupti quos dolores et quas.
+							</p>
+						</div>
+						<div class="services-card">
+							<svg class="services-card__icon">
+								<use
+									href="/icons/icon-sprite.svg#car-breaks"
+								></use>
+							</svg>
+							<h3 class="services-card__title">
+								Auto Maintenance
+							</h3>
+							<p class="services-card__text">
+								At vero eos et accusamus et iusto odio
+								dignissimos ducimus qui blanditiis praesentium
+								corrupti quos dolores et quas.
+							</p>
+						</div>
+						<div class="services-card">
+							<svg class="services-card__icon">
+								<use
+									href="/icons/icon-sprite.svg#car-tires"
+								></use>
+							</svg>
+							<h3 class="services-card__title">Tires</h3>
+							<p class="services-card__text">
+								At vero eos et accusamus et iusto odio
+								dignissimos ducimus qui blanditiis praesentium
+								corrupti quos dolores et quas.
+							</p>
+						</div>
+						<div class="services-card">
+							<svg class="services-card__icon">
+								<use
+									href="/icons/icon-sprite.svg#car-engine-check"
+								></use>
+							</svg>
+							<h3 class="services-card__title">
+								Service Warranty
+							</h3>
+							<p class="services-card__text">
+								At vero eos et accusamus et iusto odio
+								dignissimos ducimus qui blanditiis praesentium
+								corrupti quos dolores et quas.
+							</p>
+						</div>
+						<div class="services-card">
+							<svg class="services-card__icon">
+								<use
+									href="/icons/icon-sprite.svg#car-shopping"
+								></use>
+							</svg>
+							<h3 class="services-card__title">Shop Online</h3>
+							<p class="services-card__text">
+								At vero eos et accusamus et iusto odio
+								dignissimos ducimus qui blanditiis praesentium
+								corrupti quos dolores et quas.
+							</p>
+						</div>
+					</div>
+					<button class="services__button button">
+						<span class="button__text">Learn more</span>
+					</button>
 				</div>
 			</section>
 		</main>

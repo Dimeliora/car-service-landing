@@ -1,0 +1,29 @@
+.services-card {
+	padding: 50px 45px;
+	background-color: #fff;
+	text-align: center;
+	transition: filter 0.3s ease-out;
+
+	&:hover {
+		filter: drop-shadow(0px 8px 16px rgba(38, 38, 38, 0.24))
+			drop-shadow(0px 16px 24px rgba(38, 38, 38, 0.2));
+	}
+
+	&__icon {
+		width: 63px;
+		height: 63px;
+	}
+
+	&__title {
+		margin-top: 35px;
+		color: $font-dark;
+		font-size: 1.9rem;
+		font-weight: 900;
+	}
+
+	&__text {
+		margin-top: 20px;
+		color: $font-gray;
+		line-height: 2.4rem;
+	}
+}

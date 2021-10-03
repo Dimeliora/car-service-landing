@@ -1,7 +1,8 @@
 .header {
 	min-height: 100vh;
 	padding-top: 25px;
-	background: $font-dark url("./images/bg-header.jpg") no-repeat center / cover;
+	background: $font-dark url("./images/bg-header.webp") no-repeat center /
+		cover;
 	color: #fff;
 
 	&__row {
@@ -51,6 +52,11 @@
 	&__info-title {
 		margin-bottom: 10px;
 		text-transform: uppercase;
+	}
+
+	&__panel-button {
+		padding-top: 13px;
+		padding-bottom: 13px;
 	}
 
 	&__menu {

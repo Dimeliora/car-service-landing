@@ -1,0 +1,20 @@
+.services {
+	padding: 110px 0 120px;
+	background: url("./images/bg-services-top.webp") no-repeat 0% 0% / 45%,
+		url("./images/bg-services-bottom.webp") no-repeat 100% 100% / 45%;
+
+	&__subheading {
+		margin-top: 30px;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 23px;
+		margin-top: 80px;
+	}
+
+	&__button {
+		margin: 65px auto 0;
+	}
+}
