@@ -1,0 +1,25 @@
+.promise-card {
+	display: flex;
+
+	&__image {
+		margin-right: 25px;
+	}
+
+	&__icon {
+		width: 63px;
+		height: 63px;
+	}
+
+	&__title {
+		color: $font-dark;
+		font-size: 1.9rem;
+		font-weight: 900;
+		line-height: 2.6rem;
+	}
+
+	&__text {
+		margin-top: 20px;
+		color: $font-gray;
+		line-height: 2.4rem;
+	}
+}

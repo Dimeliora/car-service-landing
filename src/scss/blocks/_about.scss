@@ -1,0 +1,27 @@
+.about {
+	margin-top: -75px;
+	padding-bottom: 175px;
+
+	&__wrapper {
+		max-height: 700px;
+		padding: 100px 85px 0;
+		background: #fff url("./images/bg-about.webp") no-repeat 100% 0 / 60%;
+	}
+
+	&__subheading {
+		max-width: 580px;
+		margin-top: 30px;
+	}
+
+	&__text {
+		margin-top: 35px;
+		color: $font-gray;
+		line-height: 2.4rem;
+	}
+
+	&__image {
+		margin-top: 55px;
+		display: block;
+		width: 100%;
+	}
+}
