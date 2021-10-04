@@ -11,6 +11,11 @@
 	cursor: pointer;
 	transition: transform 0.2s ease-out;
 
+	&--bigger {
+		width: 24px;
+		height: 24px;
+	}
+
 	&:focus,
 	&:hover {
 		outline: none;
