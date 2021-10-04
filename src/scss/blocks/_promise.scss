@@ -1,14 +1,89 @@
 .promise {
 	padding: 75px 0 120px;
 
+	@media (max-width: $lg) {
+		padding: 55px 0 120px;
+	}
+
+	@media (max-width: $md) {
+		padding: 35px 0 120px;
+	}
+
 	&__subheading {
 		margin-top: 30px;
+
+		@media (max-width: $sm) {
+			margin-top: 20px;
+		}
 	}
 
 	&__items {
 		margin-top: 70px;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		column-gap: 25px;
+		gap: 25px;
+
+		@media (max-width: $lg) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (max-width: $md) {
+			display: block;
+			margin-top: 40px;
+		}
+	}
+
+	&-card {
+		display: flex;
+
+		@media (max-width: $md) {
+			margin-bottom: 35px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&__image {
+			margin-right: 25px;
+		}
+
+		&__icon {
+			width: 63px;
+			height: 63px;
+
+			@media (max-width: $md) {
+				width: 45px;
+				height: 45px;
+			}
+		}
+
+		&__title {
+			color: $font-dark;
+			font-size: 1.9rem;
+			font-weight: 900;
+			line-height: 2.6rem;
+
+			@media (max-width: $md) {
+				font-size: 1.6rem;
+				font-weight: 700;
+			}
+		}
+
+		&__text {
+			margin-top: 20px;
+			color: $font-gray;
+			line-height: 2.4rem;
+
+			@media (max-width: $md) {
+				margin-top: 10px;
+				font-size: 1.4rem;
+				line-height: 2rem;
+			}
+		}
 	}
 }
