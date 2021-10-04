@@ -379,71 +379,97 @@
 				</div>
 			</section>
 
-			<!-- <section class="services">
+			<section class="services">
 				<div class="container">
-					<h2 class="services__heading section-heading">Our services</h2>
+					<h2 class="services__heading section-heading">
+						Our services
+					</h2>
 					<div class="services__subheading section-subheading">
 						Sed perspiciatis omnis iste natus
 					</div>
 					<div class="services__items">
 						<div class="services-card">
 							<svg class="services-card__icon">
-								<use href="/icons/icon-sprite.svg#car-bay"></use>
+								<use
+									href="/icons/icon-sprite.svg#car-bay"
+								></use>
 							</svg>
-							<h3 class="services-card__title">Multi Point Inspections</h3>
+							<h3 class="services-card__title">
+								Multi Point Inspections
+							</h3>
 							<p class="services-card__text">
-								At vero eos et accusamus et iusto odio dignissimos ducimus qui
-								blanditiis praesentium corrupti quos dolores et quas.
+								At vero eos et accusamus et iusto odio
+								dignissimos ducimus qui blanditiis praesentium
+								corrupti quos dolores et quas.
 							</p>
 						</div>
 						<div class="services-card">
 							<svg class="services-card__icon">
-								<use href="/icons/icon-sprite.svg#car-engine"></use>
+								<use
+									href="/icons/icon-sprite.svg#car-engine"
+								></use>
 							</svg>
 							<h3 class="services-card__title">Auto Repair</h3>
 							<p class="services-card__text">
-								At vero eos et accusamus et iusto odio dignissimos ducimus qui
-								blanditiis praesentium corrupti quos dolores et quas.
+								At vero eos et accusamus et iusto odio
+								dignissimos ducimus qui blanditiis praesentium
+								corrupti quos dolores et quas.
 							</p>
 						</div>
 						<div class="services-card">
 							<svg class="services-card__icon">
-								<use href="/icons/icon-sprite.svg#car-breaks"></use>
+								<use
+									href="/icons/icon-sprite.svg#car-breaks"
+								></use>
 							</svg>
-							<h3 class="services-card__title">Auto Maintenance</h3>
+							<h3 class="services-card__title">
+								Auto Maintenance
+							</h3>
 							<p class="services-card__text">
-								At vero eos et accusamus et iusto odio dignissimos ducimus qui
-								blanditiis praesentium corrupti quos dolores et quas.
+								At vero eos et accusamus et iusto odio
+								dignissimos ducimus qui blanditiis praesentium
+								corrupti quos dolores et quas.
 							</p>
 						</div>
 						<div class="services-card">
 							<svg class="services-card__icon">
-								<use href="/icons/icon-sprite.svg#car-tires"></use>
+								<use
+									href="/icons/icon-sprite.svg#car-tires"
+								></use>
 							</svg>
 							<h3 class="services-card__title">Tires</h3>
 							<p class="services-card__text">
-								At vero eos et accusamus et iusto odio dignissimos ducimus qui
-								blanditiis praesentium corrupti quos dolores et quas.
+								At vero eos et accusamus et iusto odio
+								dignissimos ducimus qui blanditiis praesentium
+								corrupti quos dolores et quas.
 							</p>
 						</div>
 						<div class="services-card">
 							<svg class="services-card__icon">
-								<use href="/icons/icon-sprite.svg#car-engine-check"></use>
+								<use
+									href="/icons/icon-sprite.svg#car-engine-check"
+								></use>
 							</svg>
-							<h3 class="services-card__title">Service Warranty</h3>
+							<h3 class="services-card__title">
+								Service Warranty
+							</h3>
 							<p class="services-card__text">
-								At vero eos et accusamus et iusto odio dignissimos ducimus qui
-								blanditiis praesentium corrupti quos dolores et quas.
+								At vero eos et accusamus et iusto odio
+								dignissimos ducimus qui blanditiis praesentium
+								corrupti quos dolores et quas.
 							</p>
 						</div>
 						<div class="services-card">
 							<svg class="services-card__icon">
-								<use href="/icons/icon-sprite.svg#car-shopping"></use>
+								<use
+									href="/icons/icon-sprite.svg#car-shopping"
+								></use>
 							</svg>
 							<h3 class="services-card__title">Shop Online</h3>
 							<p class="services-card__text">
-								At vero eos et accusamus et iusto odio dignissimos ducimus qui
-								blanditiis praesentium corrupti quos dolores et quas.
+								At vero eos et accusamus et iusto odio
+								dignissimos ducimus qui blanditiis praesentium
+								corrupti quos dolores et quas.
 							</p>
 						</div>
 					</div>
@@ -457,7 +483,9 @@
 				<div class="container">
 					<div class="appointment__wrapper">
 						<div class="appointment__form-wrapper">
-							<h2 class="appointment__heading">Make an appointment</h2>
+							<h2 class="appointment__heading">
+								Make an appointment
+							</h2>
 							<form class="appointment__form">
 								<div class="appointment__form-fields">
 									<input
@@ -466,6 +494,7 @@
 										class="appointment__form-input"
 										placeholder="Name"
 										aria-label="Name"
+										required
 									/>
 									<input
 										type="email"
@@ -473,6 +502,7 @@
 										class="appointment__form-input"
 										placeholder="Email"
 										aria-label="Email"
+										required
 									/>
 									<input
 										type="phone"
@@ -480,13 +510,17 @@
 										class="appointment__form-input"
 										placeholder="Phone Number"
 										aria-label="Phone Number"
+										required
 									/>
 									<select
 										name="service"
 										class="appointment__form-select"
 										aria-label="Service"
+										required
 									>
-										<option hidden selected value="">Select Service</option>
+										<option hidden selected value="">
+											Select Service
+										</option>
 										<option value="foo">Foo</option>
 										<option value="bar">Bar</option>
 									</select>
@@ -498,7 +532,9 @@
 									></textarea>
 								</div>
 								<button class="appointment__form-button button">
-									<span class="button__text">Make an appointment</span>
+									<span class="button__text"
+										>Make an appointment</span
+									>
 								</button>
 							</form>
 						</div>
@@ -515,7 +551,7 @@
 				</div>
 			</section>
 
-			<section class="gallery">
+			<!-- <section class="gallery">
 				<div class="container">
 					<div class="gallery__wrapper">
 						<h2 class="gallery__heading section-heading">
