@@ -3,14 +3,42 @@
 	padding-bottom: 240px;
 	background: url("./images/bg-gears-bottom.webp") no-repeat 0% 100% / 45%;
 
+	@media (max-width: $lg) {
+		padding-bottom: 180px;
+		background-size: 60%;
+	}
+
+	@media (max-width: $md) {
+		margin: 0;
+		padding-bottom: 100px;
+		background-size: 80%;
+	}
+
+	@media (max-width: $sm) {
+		padding-bottom: 60px;
+	}
+
 	&__wrapper {
 		max-height: 700px;
 		padding: 100px 85px 0;
 		background-color: #fff;
+
+		@media (max-width: $lg) {
+			padding: 100px 35px 0;
+		}
+
+		@media (max-width: $md) {
+			margin: 0 -20px;
+			padding: 60px 20px 0;
+		}
 	}
 
 	&__subheading {
 		margin-top: 30px;
+
+		@media (max-width: $sm) {
+			margin-top: 20px;
+		}
 	}
 
 	&__tabs {
@@ -20,6 +48,14 @@
 		padding: 0 15px 12px 15px;
 		border-bottom: 1px solid #d5d5d5;
 		list-style-type: none;
+
+		@media (max-width: $md) {
+			font-size: 1.4rem;
+		}
+
+		@media (max-width: $sm) {
+			margin-top: 30px;
+		}
 	}
 
 	&__tab-item {
@@ -30,7 +66,7 @@
 				content: "";
 				position: absolute;
 				top: 0;
-				right: 10px;
+				right: 0;
 				display: block;
 				width: 6px;
 				height: 6px;
@@ -47,13 +83,14 @@
 	}
 
 	&__tab-button {
-		padding: 5px 20px;
+		padding: 5px 10px;
 		border: none;
 		background-color: transparent;
+		color: $font-dark;
 		transition: color 0.2s ease-out;
 		cursor: pointer;
 
-		&:focus,
+		&:focus-visible,
 		&:hover {
 			outline: none;
 			color: $red-dark;
@@ -74,6 +111,14 @@
 				width: var(--width-value);
 				height: 4px;
 				background-color: $red-dark;
+			}
+		}
+
+		@media (max-width: $md) {
+			&:focus-visible,
+			&:hover {
+				outline: none;
+				color: $font-dark;
 			}
 		}
 	}
