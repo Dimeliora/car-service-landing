@@ -122,14 +122,14 @@
 		text-decoration: none;
 		transition: color 0.2s ease-out;
 
-		&:focus,
+		&:focus-visible,
 		&:hover {
 			outline: none;
 			color: $red-dark;
 		}
 
 		@media (max-width: $lg) {
-			&:focus,
+			&:focus-visible,
 			&:hover {
 				color: #fff;
 			}
@@ -341,7 +341,7 @@
 		text-decoration: none;
 		transition: color 0.2s ease-out;
 
-		&:focus,
+		&:focus-visible,
 		&:hover {
 			outline: none;
 			color: $red-dark;
@@ -350,7 +350,7 @@
 		@media (max-width: $md) {
 			color: #fff;
 
-			&:focus,
+			&:focus-visible,
 			&:hover {
 				color: #fff;
 			}

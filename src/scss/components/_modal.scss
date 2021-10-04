@@ -1,0 +1,59 @@
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	padding: 0 30px;
+	background-color: rgba(2, 19, 60, 0.8);
+
+	&--visible {
+		display: block;
+	}
+
+	&__content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: $gray-light;
+	}
+
+	&__close-button {
+		position: absolute;
+		top: 0;
+		right: -35px;
+		width: 20px;
+		height: 20px;
+		padding: 0;
+		border: none;
+		background-color: transparent;
+		cursor: pointer;
+
+		&:focus-visible,
+		&:hover {
+			outline: none;
+
+			.modal__close-icon {
+				fill: $red-dark;
+			}
+		}
+
+		@media (max-width: $md) {
+			&:focus-visible,
+			&:hover {
+				.modal__close-icon {
+					fill: #fff;
+				}
+			}
+		}
+	}
+
+	&__close-icon {
+		width: 100%;
+		height: 100%;
+		fill: #fff;
+		transition: fill 0.2s ease-out;
+	}
+}
