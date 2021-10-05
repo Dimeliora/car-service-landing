@@ -51,7 +51,10 @@
 							</div>
 						</div>
 
-						<button class="header__panel-button button">
+						<button
+							class="header__panel-button button"
+							data-trigger="appointment-modal"
+						>
 							<span class="button__text">Make an Appointment</span>
 						</button>
 
@@ -165,7 +168,10 @@
 					<h1 class="header__heading">
 						Top notch service is our main auto motive
 					</h1>
-					<button class="header__button button">
+					<button
+						class="header__button button"
+						data-trigger="appointment-modal"
+					>
 						<span class="button__text">Make an Appointment</span>
 					</button>
 				</div>
@@ -362,9 +368,9 @@
 							</p>
 						</div>
 					</div>
-					<button class="services__button button">
+					<a href="/" class="services__button button button--link">
 						<span class="button__text">Learn more</span>
-					</button>
+					</a>
 				</div>
 			</section>
 
@@ -428,10 +434,73 @@
 							<div class="appointment__counter-title">
 								Maxime placeat facere possimus omnis
 							</div>
-							<div class="appointment__counter-value">5,700+</div>
+							<div class="appointment__counter-value" id="counter">0+</div>
 							<div class="appointment__counter-description">
 								customers served (and counting)
 							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="appointment__modal modal" id="appointment-modal">
+					<div class="modal__content">
+						<button class="modal__close-button" aria-label="Close modal">
+							<svg class="modal__close-icon">
+								<use href="/icons/icon-sprite.svg#close"></use>
+							</svg>
+						</button>
+						<div class="appointment__modal-form">
+							<h2 class="appointment__heading">Make an appointment</h2>
+							<form class="appointment__form">
+								<div class="appointment__form-fields">
+									<input
+										type="text"
+										name="name"
+										class="appointment__form-input"
+										placeholder="Name"
+										aria-label="Name"
+										required
+									/>
+									<input
+										type="email"
+										name="email"
+										class="appointment__form-input"
+										placeholder="Email"
+										aria-label="Email"
+										required
+									/>
+									<input
+										type="phone"
+										name="phone"
+										class="appointment__form-input"
+										placeholder="Phone Number"
+										aria-label="Phone Number"
+										required
+									/>
+									<select
+										name="service"
+										class="appointment__form-select"
+										aria-label="Service"
+										required
+									>
+										<option hidden selected value="">Select Service</option>
+										<option value="foo">Auto Repair</option>
+										<option value="bar">Auto Maintenance</option>
+										<option value="bar">Tires</option>
+										<option value="bar">Service Warranty</option>
+										<option value="bar">Shop Online</option>
+									</select>
+									<textarea
+										name="needing-services"
+										class="appointment__form-textarea"
+										placeholder="Tell us about the car needing service(s)"
+										aria-label="Car needing service(s)"
+									></textarea>
+								</div>
+								<button class="appointment__form-button button">
+									<span class="button__text">Make an appointment</span>
+								</button>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -682,7 +751,10 @@
 								Sed do eiusmod tempor incididunt ut labore et dolore magna
 								aliqua
 							</div>
-							<button class="impact__appointment-button button">
+							<button
+								class="impact__appointment-button button"
+								data-trigger="appointment-modal"
+							>
 								<span class="button__text">Make an appointment</span>
 							</button>
 						</div>

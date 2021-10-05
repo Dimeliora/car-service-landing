@@ -2,10 +2,11 @@
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 1000;
 	display: none;
 	width: 100vw;
 	height: 100vh;
-	padding: 0 30px;
+	padding: 0 20px;
 	background-color: rgba(2, 19, 60, 0.8);
 
 	&--visible {
@@ -47,6 +48,11 @@
 					fill: #fff;
 				}
 			}
+		}
+
+		@media (max-width: $sm) {
+			top: -30px;
+			right: 0;
 		}
 	}
 

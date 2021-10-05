@@ -97,18 +97,15 @@
 
 	&__modal {
 		.modal__content {
-			width: 70%;
+			width: 90%;
 			height: 70%;
 
 			@media (max-width: $lg) {
-				height: 50%;
-			}
-
-			@media (max-width: $md) {
-				height: 40%;
+				width: 85%;
 			}
 
 			@media (max-width: $sm) {
+				width: 90%;
 				height: 30%;
 			}
 		}

@@ -43,18 +43,9 @@
 		}
 	}
 
-	&__text {
-		position: relative;
-		z-index: 10;
-		color: #fff;
-		font-size: 1.2rem;
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.15px;
-
-		@media (max-width: $sm) {
-			font-size: 1rem;
-		}
+	&--link {
+		width: fit-content;
+		text-decoration: none;
 	}
 
 	@media (max-width: $md) {
@@ -69,5 +60,19 @@
 
 	@media (max-width: $sm) {
 		padding: 12px 50px 12px 20px;
+	}
+
+	&__text {
+		position: relative;
+		z-index: 10;
+		color: #fff;
+		font-size: 1.2rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.15px;
+
+		@media (max-width: $sm) {
+			font-size: 1rem;
+		}
 	}
 }
