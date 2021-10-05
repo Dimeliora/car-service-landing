@@ -1,7 +1,7 @@
 .gallery {
 	margin-top: -75px;
 	padding-bottom: 240px;
-	background: url("./images/bg-gears-bottom.webp") no-repeat 0% 100% / 45%;
+	background: url("/images/bg-gears-bottom.webp") no-repeat 0% 100% / 45%;
 
 	@media (max-width: $lg) {
 		padding-bottom: 180px;
@@ -72,12 +72,13 @@
 
 		@media (max-width: $md) {
 			padding: 0 10px 4px 10px;
-			font-size: 1.2rem;
+			font-size: 1.4rem;
 		}
 
 		@media (max-width: $sm) {
-			padding: 0 0 4px 0;
 			margin-top: 30px;
+			padding: 0 0 4px 0;
+			font-size: 1.2rem;
 		}
 	}
 

@@ -18,8 +18,7 @@
 	&__wrapper {
 		max-height: 700px;
 		padding: 100px 85px 0;
-		background: #fff url("./images/bg-gears-top.webp") no-repeat 100% 0 /
-			60%;
+		background: #fff url("/images/bg-gears-top.webp") no-repeat 100% 0 / 60%;
 
 		@media (max-width: $lg) {
 			padding: 100px 35px 0;

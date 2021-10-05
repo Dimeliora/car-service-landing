@@ -1,7 +1,7 @@
 .services {
 	padding: 110px 0 120px;
-	background: url("./images/bg-gears-reversed-top.webp") no-repeat 0% 0% / 45%,
-		url("./images/bg-gears-bottom.webp") no-repeat 100% 100% / 45%;
+	background: url("/images/bg-gears-reversed-top.webp") no-repeat 0% 0% / 45%,
+		url("/images/bg-gears-bottom.webp") no-repeat 100% 100% / 45%;
 
 	@media (max-width: $lg) {
 		background-size: 60%;

@@ -1,7 +1,7 @@
 .appointment {
 	padding: 130px 0 210px;
-	background: url("./images/bg-gears-top.webp") no-repeat 100% 0% / 45%,
-		url("./images/bg-gears-bottom.webp") no-repeat 0% 100% / 45%, $font-dark;
+	background: url("/images/bg-gears-top.webp") no-repeat 100% 0% / 45%,
+		url("/images/bg-gears-bottom.webp") no-repeat 0% 100% / 45%, $font-dark;
 
 	@media (max-width: $lg) {
 		padding: 130px 0 170px;

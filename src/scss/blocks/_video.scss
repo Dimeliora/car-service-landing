@@ -1,5 +1,5 @@
 .video {
-	background: $font-dark url("./images/bg-video.webp") no-repeat 0% 0% / cover;
+	background: $font-dark url("/images/bg-video.webp") no-repeat 0% 0% / cover;
 
 	@media (max-width: $sm) {
 		background-position: 20% 0%;
