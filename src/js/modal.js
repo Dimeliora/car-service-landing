@@ -1,4 +1,9 @@
-export const modalHandler = (modal, triggers, onClose = () => {}) => {
+export const modalHandler = (
+	modal,
+	triggers,
+	onOpen = () => {},
+	onClose = () => {}
+) => {
 	const modalElm = document.querySelector(modal);
 	const openModalButtons = document.querySelectorAll(triggers);
 
@@ -24,6 +29,8 @@ export const modalHandler = (modal, triggers, onClose = () => {}) => {
 			button.addEventListener("click", () => {
 				modalElm.classList.add("modal--visible");
 				document.body.classList.add("scroll-prevent");
+
+				onOpen();
 			});
 		});
 	}

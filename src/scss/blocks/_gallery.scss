@@ -42,24 +42,65 @@
 	}
 
 	&__tabs {
+		--left-offset: 0px;
+		--width-value: 0px;
+		position: relative;
 		display: flex;
+		align-items: flex-start;
 		justify-content: space-between;
 		margin-top: 50px;
 		padding: 0 15px 12px 15px;
 		border-bottom: 1px solid #d5d5d5;
 		list-style-type: none;
 
+		&::after {
+			content: "";
+			position: absolute;
+			left: var(--left-offset);
+			bottom: -2px;
+			width: var(--width-value);
+			height: 4px;
+			border-radius: 10px;
+			background-color: $red-dark;
+			transition: all 0.2s ease-in-out;
+
+			@media (max-width: $md) {
+				bottom: -1px;
+				height: 2px;
+			}
+		}
+
 		@media (max-width: $md) {
-			font-size: 1.4rem;
+			padding: 0 10px 4px 10px;
+			font-size: 1.2rem;
 		}
 
 		@media (max-width: $sm) {
+			padding: 0 0 4px 0;
 			margin-top: 30px;
 		}
 	}
 
-	&__tab-item {
+	&__tab-button {
 		position: relative;
+		padding: 5px 10px;
+		border: none;
+		background-color: transparent;
+		color: $font-dark;
+		transition: color 0.2s ease-out;
+		cursor: pointer;
+
+		&:focus-visible,
+		&:hover {
+			outline: none;
+			color: $red-dark;
+		}
+
+		&--active {
+			position: relative;
+			color: $red-dark;
+			font-weight: 500;
+		}
 
 		&--stream {
 			&::before {
@@ -80,51 +121,40 @@
 				background-color: $green;
 			}
 		}
-	}
-
-	&__tab-button {
-		padding: 5px 10px;
-		border: none;
-		background-color: transparent;
-		color: $font-dark;
-		transition: color 0.2s ease-out;
-		cursor: pointer;
-
-		&:focus-visible,
-		&:hover {
-			outline: none;
-			color: $red-dark;
-		}
-
-		&--active {
-			--left-offset: 0px;
-			--width-value: 170px;
-			position: relative;
-			color: $red-dark;
-			font-weight: 700;
-
-			&::after {
-				content: "";
-				position: absolute;
-				left: var(--left-offset);
-				bottom: -14px;
-				width: var(--width-value);
-				height: 4px;
-				background-color: $red-dark;
-			}
-		}
 
 		@media (max-width: $md) {
+			padding: 5px 7px;
+
 			&:focus-visible,
 			&:hover {
 				outline: none;
 				color: $font-dark;
 			}
 		}
+
+		@media (max-width: $sm) {
+			min-width: 70px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
 	}
 
 	&__view {
+		position: relative;
 		margin-top: 50px;
+
+		@media (max-width: $md) {
+			margin-top: 30px;
+		}
+	}
+
+	&__item {
+		display: none;
+
+		&--active {
+			display: block;
+		}
 
 		&--live {
 			position: relative;
@@ -142,6 +172,14 @@
 				background-color: $green;
 				color: #fff;
 				font-size: 1.6rem;
+
+				@media (max-width: $sm) {
+					top: 15px;
+					right: 15px;
+					width: 40px;
+					height: 20px;
+					font-size: 1.4rem;
+				}
 			}
 		}
 	}
@@ -149,5 +187,7 @@
 	&__image {
 		display: block;
 		width: 100%;
+		max-height: 470px;
+		object-fit: cover;
 	}
 }
