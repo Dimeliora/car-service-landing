@@ -216,7 +216,15 @@ const serve = series(build, parallel(devServer, watchers));
 // ======== Generate favicons & HTML Injection ========
 const favicon = series(makeFavicons, injectFavicons, clearFaviconData);
 
+// ======== Production Task ========
+const prod = series(
+	clearDist,
+	favicon,
+	parallel(html, scss, js, images, webpConvert, svg, fonts)
+);
+
 // ======== Exports ========
-exports.serve = serve;
 exports.build = build;
+exports.serve = serve;
 exports.favicon = favicon;
+exports.prod = prod;

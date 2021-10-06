@@ -97,6 +97,10 @@
 		}
 
 		&__text {
+			-webkit-line-clamp: 6;
+			-webkit-box-orient: vertical;
+			display: -webkit-box;
+			overflow: hidden;
 			margin-top: 20px;
 			color: $font-gray;
 			line-height: 2.4rem;

@@ -82,6 +82,10 @@
 		margin-top: 25px;
 		font-size: 1.4rem;
 		line-height: 2.2rem;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		display: -webkit-box;
+		overflow: hidden;
 
 		@media (max-width: $md) {
 			margin-top: 0;
