@@ -94,7 +94,7 @@
 		}
 
 		&:focus {
-			outline-color: $red-dark;
+			outline: 2px solid $red-dark;
 		}
 
 		@media (max-width: $sm) {
