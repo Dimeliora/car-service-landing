@@ -1,8 +1,7 @@
 .header {
 	min-height: 100vh;
 	padding-top: 25px;
-	background: $font-dark url("/images/bg-header.webp") no-repeat 100% 0% /
-		cover;
+	background: $font-dark url("/images/bg-header.webp") no-repeat 100% 0% / cover;
 	color: #fff;
 
 	@media (max-width: $sm) {
@@ -160,7 +159,8 @@
 			border: none;
 			background-color: transparent;
 
-			div {
+			span {
+				display: block;
 				width: 100%;
 				height: 2px;
 				background-color: #fff;
@@ -173,7 +173,7 @@
 			}
 
 			&--active {
-				div {
+				span {
 					&:nth-child(1) {
 						transform: rotate(45deg) translate(0px, -50%);
 					}
