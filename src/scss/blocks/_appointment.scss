@@ -84,7 +84,7 @@
 	&__form-select,
 	&__form-textarea {
 		width: 100%;
-		padding: 17px 23px 15px;
+		padding: 15px 23px;
 		border: none;
 		background-color: $gray-light;
 		color: $font-dark;
@@ -98,7 +98,8 @@
 		}
 
 		@media (max-width: $sm) {
-			margin-bottom: 22px;
+			margin-bottom: 18px;
+			padding: 10px 15px 10px;
 			font-size: 1.4rem;
 
 			&:last-child {
@@ -122,7 +123,7 @@
 		resize: none;
 
 		@media (max-width: $sm) {
-			height: 150px;
+			height: 100px;
 		}
 	}
 

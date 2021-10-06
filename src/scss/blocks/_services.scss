@@ -31,7 +31,7 @@
 		}
 
 		@media (max-width: $md) {
-			grid-template-columns: 1fr;
+			display: block;
 		}
 
 		@media (max-width: $sm) {
@@ -63,6 +63,12 @@
 		}
 
 		@media (max-width: $md) {
+			margin-bottom: 23px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
 			&:hover {
 				filter: none;
 			}

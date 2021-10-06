@@ -52,9 +52,9 @@
 	}
 
 	&__image {
-		margin-top: 55px;
 		display: block;
 		width: 100%;
+		margin-top: 55px;
 
 		@media (max-width: $sm) {
 			margin-top: 35px;
