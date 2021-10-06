@@ -21,7 +21,8 @@ const browserSync = require("browser-sync").create();
 
 const SRC_PATH = "./src";
 const DEST_PATH = "./dist";
-const FAVICON_DATA_PATH = `${SRC_PATH}/faviconData.json`;
+const FAVICON_DESIGN_PATH = `${SRC_PATH}/favicon/faviconDesign.json`;
+const FAVICON_DATA_PATH = `${SRC_PATH}/favicon/faviconData.json`;
 const IS_PROD = process.env.NODE_ENV === "production";
 const WEBPACK_MODE = IS_PROD ? "production" : "development";
 
@@ -154,48 +155,7 @@ const makeFavicons = (done) =>
 			masterPicture: `${SRC_PATH}/favicon/favicon.png`,
 			dest: `${DEST_PATH}/icons`,
 			iconsPath: "/icons",
-			design: {
-				ios: {
-					pictureAspect: "noChange",
-					assets: {
-						ios6AndPriorIcons: false,
-						ios7AndLaterIcons: false,
-						precomposedIcons: false,
-						declareOnlyDefaultIcon: true,
-					},
-				},
-				desktopBrowser: {
-					design: "raw",
-				},
-				windows: {
-					pictureAspect: "noChange",
-					backgroundColor: "#da532c",
-					onConflict: "override",
-					assets: {
-						windows80Ie10Tile: false,
-						windows10Ie11EdgeTiles: {
-							small: false,
-							medium: true,
-							big: false,
-							rectangle: false,
-						},
-					},
-				},
-				androidChrome: {
-					pictureAspect: "noChange",
-					themeColor: "#ffffff",
-					manifest: {
-						display: "standalone",
-						orientation: "notSet",
-						onConflict: "override",
-						declared: true,
-					},
-					assets: {
-						legacyIcon: false,
-						lowResolutionIcons: false,
-					},
-				},
-			},
+			design: JSON.parse(fs.readFileSync(FAVICON_DESIGN_PATH)),
 			settings: {
 				scalingAlgorithm: "Mitchell",
 				errorOnImageTooSmall: false,
@@ -216,13 +176,13 @@ const injectFavicons = () =>
 				JSON.parse(fs.readFileSync(FAVICON_DATA_PATH)).favicon.html_code
 			)
 		)
-		.pipe(dest(SRC_PATH));
+		.pipe(dest(SRC_PATH, { overwrite: true }));
 
 // ======== Favicons Data remove ========
 const clearFaviconData = () => del(FAVICON_DATA_PATH);
 
 // ======== Dist Clear ========
-const clear = () => del(DEST_PATH);
+const clearDist = () => del(DEST_PATH);
 
 // ======== Dev server ========
 const devServer = () => {
@@ -246,14 +206,17 @@ const watchers = () => {
 
 // ======== Build Task ========
 const build = series(
-	clear,
-	series(makeFavicons, injectFavicons, clearFaviconData),
+	clearDist,
 	parallel(html, scss, js, images, webpConvert, svg, fonts)
 );
 
 // ======== Build & Serve Task ========
 const serve = series(build, parallel(devServer, watchers));
 
+// ======== Generate favicons & HTML Injection ========
+const favicon = series(makeFavicons, injectFavicons, clearFaviconData);
+
 // ======== Exports ========
 exports.serve = serve;
 exports.build = build;
+exports.favicon = favicon;

@@ -1,12 +1,13 @@
 {
-	"name": "practical-course-3--landing",
+	"name": "car-service-landing",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
+	"main": "index.html",
 	"scripts": {
 		"serve": "cross-env NODE_ENV=development gulp serve",
 		"build": "cross-env NODE_ENV=development gulp build",
-		"prod": "cross-env NODE_ENV=production gulp build"
+		"prod": "cross-env NODE_ENV=production gulp build",
+		"favicon": "gulp favicon"
 	},
 	"keywords": [],
 	"author": "",
