@@ -21,8 +21,8 @@ const browserSync = require("browser-sync").create();
 
 const SRC_PATH = "./src";
 const DEST_PATH = "./dist";
-const FAVICON_DESIGN_PATH = `${SRC_PATH}/favicon/faviconDesign.json`;
-const FAVICON_DATA_PATH = `${SRC_PATH}/favicon/faviconData.json`;
+const FAVICON_DESIGN_PATH = "./favicon-design.json";
+const FAVICON_DATA_PATH = "./favicon-data.json";
 const IS_PROD = process.env.NODE_ENV === "production";
 const WEBPACK_MODE = IS_PROD ? "production" : "development";
 
@@ -153,7 +153,7 @@ const makeFavicons = (done) =>
 	realFavicon.generateFavicon(
 		{
 			masterPicture: `${SRC_PATH}/favicon/favicon.png`,
-			dest: `${DEST_PATH}/icons`,
+			dest: `${SRC_PATH}/favicon`,
 			iconsPath: "/icons",
 			design: JSON.parse(fs.readFileSync(FAVICON_DESIGN_PATH)),
 			settings: {
@@ -177,6 +177,10 @@ const injectFavicons = () =>
 			)
 		)
 		.pipe(dest(SRC_PATH, { overwrite: true }));
+
+// ======== Favicons Copy Handler ========
+const copyFavicons = () =>
+	src(`${SRC_PATH}/favicon/*.*`).pipe(dest(`${DEST_PATH}/icons`));
 
 // ======== Favicons Data remove ========
 const clearFaviconData = () => del(FAVICON_DATA_PATH);
@@ -204,27 +208,19 @@ const watchers = () => {
 	watch(`${SRC_PATH}/icons/**/*.svg`, svg);
 };
 
+// ======== Generate favicons & HTML Injection ========
+const favicon = series(makeFavicons, injectFavicons, clearFaviconData);
+
 // ======== Build Task ========
 const build = series(
 	clearDist,
-	parallel(html, scss, js, images, webpConvert, svg, fonts)
+	favicon,
+	parallel(html, scss, js, images, webpConvert, svg, fonts, copyFavicons)
 );
 
 // ======== Build & Serve Task ========
 const serve = series(build, parallel(devServer, watchers));
 
-// ======== Generate favicons & HTML Injection ========
-const favicon = series(makeFavicons, injectFavicons, clearFaviconData);
-
-// ======== Production Task ========
-const prod = series(
-	clearDist,
-	favicon,
-	parallel(html, scss, js, images, webpConvert, svg, fonts)
-);
-
 // ======== Exports ========
 exports.build = build;
 exports.serve = serve;
-exports.favicon = favicon;
-exports.prod = prod;
