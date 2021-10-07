@@ -208,13 +208,10 @@ const watchers = () => {
 	watch(`${SRC_PATH}/icons/**/*.svg`, svg);
 };
 
-// ======== Generate favicons & HTML Injection ========
-const favicon = series(makeFavicons, injectFavicons, clearFaviconData);
-
 // ======== Build Task ========
 const build = series(
 	clearDist,
-	favicon,
+	series(makeFavicons, injectFavicons, clearFaviconData),
 	parallel(html, scss, js, images, webpConvert, svg, fonts, copyFavicons)
 );
 
