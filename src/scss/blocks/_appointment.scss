@@ -90,7 +90,7 @@
 		color: $font-dark;
 
 		&::placeholder {
-			color: #959595;
+			color: $font-light;
 		}
 
 		&:focus {
@@ -110,8 +110,11 @@
 
 	&__form-select {
 		appearance: none;
-		color: #959595;
 		cursor: pointer;
+
+		&:invalid {
+			color: $font-light;
+		}
 
 		option {
 			color: $font-dark;
