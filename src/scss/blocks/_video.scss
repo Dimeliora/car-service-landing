@@ -63,9 +63,7 @@
 
 		@media (max-width: $lg) {
 			margin: 30px auto 0;
-		}
 
-		@media (max-width: $md) {
 			&:focus-visible,
 			&:hover {
 				box-shadow: 0 0 0 13px rgba(255, 255, 255, 0.2),

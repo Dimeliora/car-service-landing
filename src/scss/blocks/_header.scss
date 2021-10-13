@@ -177,7 +177,7 @@
 			&--active {
 				span {
 					&:nth-child(1) {
-						transform: rotate(45deg) translate(0px, -50%);
+						transform: rotate(45deg);
 					}
 
 					&:nth-child(2) {
@@ -185,7 +185,7 @@
 					}
 
 					&:nth-child(3) {
-						transform: rotate(-45deg) translate(0px, 50%);
+						transform: rotate(-45deg) translate(-3px);
 					}
 				}
 			}
@@ -349,13 +349,15 @@
 			color: $red-dark;
 		}
 
-		@media (max-width: $md) {
-			color: #fff;
-
+		@media (max-width: $lg) {
 			&:focus-visible,
 			&:hover {
-				color: #fff;
+				color: $font-dark;
 			}
+		}
+
+		@media (max-width: $md) {
+			color: #fff;
 		}
 	}
 

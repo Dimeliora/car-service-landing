@@ -1,11 +1,11 @@
 .impact {
 	padding-top: 110px;
 	background: $font-dark url("/images/bg-impact.webp") no-repeat center / 100%;
-	
+
 	@media (max-width: $lg) {
 		background-size: cover;
 	}
-	
+
 	@media (max-width: $sm) {
 		padding-top: 60px;
 	}
@@ -47,21 +47,10 @@
 
 	&__stats {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		column-gap: 25px;
+		grid-template-columns: repeat(auto-fit, 215px);
+		justify-content: center;
+		gap: 50px 30px;
 		margin-top: 80px;
-		
-		@media (max-width: $lg) {
-			grid-template-columns: repeat(2, 1fr);
-			row-gap: 35px;
-			padding: 0 30px;
-		}
-		
-		@media (max-width: $sm) {
-			grid-template-columns: 1fr;
-			row-gap: 50px;
-			margin-top: 40px;
-		}
 	}
 
 	&__appointment {
@@ -110,15 +99,6 @@
 
 	&-item {
 		display: flex;
-
-		@media (max-width: $sm) {
-			width: 250px;
-			justify-self: start;
-
-			&:nth-child(2n) {
-				justify-self: end;
-			}
-		}
 
 		&__image {
 			margin-right: 12px;
