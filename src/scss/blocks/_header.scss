@@ -208,7 +208,7 @@
 	&__submenu {
 		position: absolute;
 		top: 17px;
-		left: 0;
+		left: -10px;
 		min-width: 180px;
 		padding: 30px 10px 10px 10px;
 		background-color: #fff;
@@ -339,6 +339,8 @@
 	}
 
 	&__link {
+		display: inline-block;
+		width: 100%;
 		color: $font-dark;
 		text-decoration: none;
 		transition: color 0.2s ease-out;
@@ -357,6 +359,7 @@
 		}
 
 		@media (max-width: $md) {
+			width: auto;
 			color: #fff;
 		}
 	}
