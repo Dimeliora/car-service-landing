@@ -1,6 +1,12 @@
-export const tabsHandler = (initialTabIdx = 0) => {
-	const tabs = document.querySelector(".gallery__tabs");
-	const tabContent = document.querySelector(".gallery__view");
+export const tabs = ({
+	tabsSelector,
+	tabContentSelector,
+	tabActiveClass,
+	tabItemActiveClass,
+	initialTabIdx = 0,
+}) => {
+	const tabs = document.querySelector(tabsSelector);
+	const tabContent = document.querySelector(tabContentSelector);
 
 	if (tabs && tabContent) {
 		const tabsButtons = [...tabs.children];
@@ -23,16 +29,16 @@ export const tabsHandler = (initialTabIdx = 0) => {
 			}
 
 			tabsButtons.forEach((btn) => {
-				btn.classList.remove("gallery__tab-button--active");
+				btn.classList.remove(tabActiveClass);
 			});
 
-			activeButton.classList.add("gallery__tab-button--active");
+			activeButton.classList.add(tabActiveClass);
 
 			tabContentItems.forEach((item) => {
-				item.classList.remove("gallery__item--active");
+				item.classList.remove(tabItemActiveClass);
 			});
 
-			activeContentItem.classList.add("gallery__item--active");
+			activeContentItem.classList.add(tabItemActiveClass);
 
 			activeTabUnderlineHandler(activeButton);
 		};
@@ -44,7 +50,7 @@ export const tabsHandler = (initialTabIdx = 0) => {
 		});
 
 		window.addEventListener("resize", () => {
-			const activeTab = document.querySelector(".gallery__tab-button--active");
+			const activeTab = document.querySelector(`.${tabActiveClass}`);
 
 			if (activeTab) {
 				activeTabUnderlineHandler(activeTab);

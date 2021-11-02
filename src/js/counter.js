@@ -1,15 +1,19 @@
 import { getRandomInt } from "./helpers/getRandomInt";
 
-export const counterHandler = (maxCounterValue = 100) => {
-	const counterElm = document.querySelector("#counter");
+export const counter = ({
+	counterSelector,
+	counterAnimationClass,
+	maxCounterValue = 100,
+}) => {
+	const counterElm = document.querySelector(counterSelector);
 	let counter = 0;
 
 	const updateCounterContent = () => {
 		counterElm.textContent = `${counter.toLocaleString("en-EN")}+`;
-		counterElm.classList.add("appointment__counter-value--animate");
+		counterElm.classList.add(counterAnimationClass);
 
 		setTimeout(() => {
-			counterElm.classList.remove("appointment__counter-value--animate");
+			counterElm.classList.remove(counterAnimationClass);
 		}, 700);
 	};
 

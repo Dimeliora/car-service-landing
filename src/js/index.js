@@ -1,36 +1,52 @@
-"use strict";
-
-import { menuHandler } from "./menu";
-import { modalHandler } from "./modal";
-import { videoFrameHandler } from "./video";
-import { tabsHandler } from "./tabs";
-import { counterHandler } from "./counter";
-
-const VIDEO_FRAME = "#video";
-const VIDEO_MODAL = "#video-modal";
-const VIDEO_MODAL_TRIGGERS = '[data-trigger="video-modal"]';
-const FORM_MODAL = "#appointment-modal";
-const FORM_MODAL_TRIGGERS = '[data-trigger="appointment-modal"]';
-
-const INITIAL_TAB_IDX = 1;
-const MAX_CUSTOMERS_COUNTER = 1000;
+import { menu } from "./menu";
+import { modal } from "./modal";
+import { video } from "./video";
+import { tabs } from "./tabs";
+import { counter } from "./counter";
 
 document.addEventListener("DOMContentLoaded", () => {
-	menuHandler();
+	const INITIAL_TAB_IDX = 1;
+	const MAX_CUSTOMERS_COUNTER = 1000;
 
-	const video = videoFrameHandler(VIDEO_FRAME);
-	if (video) {
-		modalHandler(
-			VIDEO_MODAL,
-			VIDEO_MODAL_TRIGGERS,
-			video.playVideo,
-			video.pauseVideo
-		);
-	}
+	menu({
+		menuSelector: "#header-menu",
+		menuButtonSelector: ".header__menu-button",
+		menuDropdownsSelector: ".header__menu-item--dropdown",
+		menuDropdownsButtonSelector: ".header__submenu-expand-button",
+		submenuSelector: ".header__submenu",
+		menuActiveClass: "header__row--visible",
+		menuButtonActiveClass: "header__menu-button--active",
+		submenuActiveClass: "header__submenu--visible",
+		menuDropdownsButtonActiveClass: "header__submenu-expand-button--active",
+	});
 
-	modalHandler(FORM_MODAL, FORM_MODAL_TRIGGERS);
+	video({
+		videoContainerId: "video-frame",
+		videoModalSelector: "#video-modal",
+		videoTriggersSelector: "button[data-trigger='video-modal']",
+		videoModalCloseSelector: "#video-modal .modal__close",
+		videoModalActiveClass: "modal--visible",
+		videoModalErrorClass: "video__player--error",
+	});
 
-	tabsHandler(INITIAL_TAB_IDX);
+	modal({
+		modalSelector: "#appointment-modal",
+		modalTriggersSelector: '[data-trigger="appointment-modal"]',
+		modalCloseButtonSelector: "#appointment-modal .modal__close",
+		modalActiveClass: "modal--visible",
+	});
 
-	counterHandler(MAX_CUSTOMERS_COUNTER);
+	tabs({
+		tabsSelector: ".gallery__tabs",
+		tabContentSelector: ".gallery__view",
+		initialTabIdx: INITIAL_TAB_IDX,
+	});
+
+	counter({
+		counterSelector: "#counter",
+		counterAnimationClass: "appointment__counter-value--animate",
+		tabActiveClass: "gallery__tab-button--active",
+		tabItemActiveClass: "gallery__item--active",
+		maxCounterValue: MAX_CUSTOMERS_COUNTER,
+	});
 });

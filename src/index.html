@@ -10,6 +10,7 @@
 			content="Simple landing page for Car Service. For education purpose"
 		/>
 		<link rel="stylesheet" href="/styles.css" />
+		<script src="https://www.youtube.com/iframe_api" async></script>
 		<script src="/script.js" defer></script>
 		<link
 			rel="apple-touch-icon"
@@ -288,6 +289,7 @@
 							class="video__play-button"
 							aria-label="Video play button"
 							data-trigger="video-modal"
+							data-video="Go59qu1Ugtk"
 						>
 							<svg class="video__play-icon">
 								<use href="/icons/icon-sprite.svg#arrow-play" />
@@ -297,19 +299,20 @@
 				</div>
 				<div class="video__modal modal" id="video-modal">
 					<div class="modal__content">
-						<button class="modal__close-button" aria-label="Close modal">
-							<svg class="modal__close-icon">
+						<button class="modal__close icon-button" aria-label="Close modal">
+							<svg class="icon-button__icon">
 								<use href="/icons/icon-sprite.svg#close" />
 							</svg>
 						</button>
-						<iframe
-							id="video"
-							class="video__frame"
-							src="https://www.youtube.com/embed/Go59qu1Ugtk?enablejsapi=1"
-							title="YouTube video player"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						></iframe>
+						<div class="video__player" id="video-frame">
+							<div class="video__error">
+								<h2 class="video__error-title">Ошибка</h2>
+								<p class="video__error-description">
+									Во время загрузки видеопроигрывателя возникла ошибка <br />
+									Повторите попытку позже
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -455,8 +458,8 @@
 				</div>
 				<div class="appointment__modal modal" id="appointment-modal">
 					<div class="modal__content">
-						<button class="modal__close-button" aria-label="Close modal">
-							<svg class="modal__close-icon">
+						<button class="modal__close icon-button" aria-label="Close modal">
+							<svg class="icon-button__icon">
 								<use href="/icons/icon-sprite.svg#close" />
 							</svg>
 						</button>

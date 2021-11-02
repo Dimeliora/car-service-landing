@@ -1,20 +1,22 @@
-export const modalHandler = (
-	modal,
-	triggers,
-	onOpen = () => {},
-	onClose = () => {}
-) => {
-	const modalElm = document.querySelector(modal);
-	const openModalButtons = document.querySelectorAll(triggers);
+import { getScrollWidth } from "./helpers/getScrollWidth";
+
+export const modal = ({
+	modalSelector,
+	modalTriggersSelector,
+	modalCloseButtonSelector,
+	modalActiveClass,
+}) => {
+	const modalElm = document.querySelector(modalSelector);
+	const openModalButtons = document.querySelectorAll(modalTriggersSelector);
+	const closeButton = document.querySelector(modalCloseButtonSelector);
 
 	if (modalElm && openModalButtons) {
-		const closeButton = modalElm.querySelector(".modal__close-button");
+		const scrollWidth = getScrollWidth();
 
 		const closeHandler = () => {
-			modalElm.classList.remove("modal--visible");
-			document.body.classList.remove("scroll-prevent");
-
-			onClose();
+			modalElm.classList.remove(modalActiveClass);
+			document.body.style.removeProperty("overflow");
+			document.body.style.removeProperty("margin-right");
 		};
 
 		modalElm.addEventListener("click", (e) => {
@@ -27,10 +29,9 @@ export const modalHandler = (
 
 		openModalButtons.forEach((button) => {
 			button.addEventListener("click", () => {
-				modalElm.classList.add("modal--visible");
-				document.body.classList.add("scroll-prevent");
-
-				onOpen();
+				modalElm.classList.add(modalActiveClass);
+				document.body.style.setProperty("overflow", "hidden");
+				document.body.style.setProperty("margin-right", `${scrollWidth}px`);
 			});
 		});
 	}
