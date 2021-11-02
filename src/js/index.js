@@ -39,14 +39,14 @@ document.addEventListener("DOMContentLoaded", () => {
 	tabs({
 		tabsSelector: ".gallery__tabs",
 		tabContentSelector: ".gallery__view",
+		tabActiveClass: "gallery__tab-button--active",
+		tabItemActiveClass: "gallery__item--active",
 		initialTabIdx: INITIAL_TAB_IDX,
 	});
 
 	counter({
 		counterSelector: "#counter",
 		counterAnimationClass: "appointment__counter-value--animate",
-		tabActiveClass: "gallery__tab-button--active",
-		tabItemActiveClass: "gallery__item--active",
 		maxCounterValue: MAX_CUSTOMERS_COUNTER,
 	});
 });
