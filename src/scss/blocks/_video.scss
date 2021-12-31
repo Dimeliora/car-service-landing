@@ -50,9 +50,8 @@
 		transition: box-shadow 0.3s ease-out;
 		cursor: pointer;
 
-		&:focus-visible,
+		&:focus,
 		&:hover {
-			outline: none;
 			box-shadow: 0 0 0 13px rgba(255, 255, 255, 0.7),
 				0 0 0 26px rgba(255, 255, 255, 0.45);
 
@@ -64,7 +63,7 @@
 		@media (max-width: $lg) {
 			margin: 30px auto 0;
 
-			&:focus-visible,
+			&:focus,
 			&:hover {
 				box-shadow: 0 0 0 13px rgba(255, 255, 255, 0.2),
 					0 0 0 26px rgba(255, 255, 255, 0.12);

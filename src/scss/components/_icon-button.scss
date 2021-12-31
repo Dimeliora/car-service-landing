@@ -1,39 +1,51 @@
 .icon-button {
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 20px;
-	height: 20px;
-	padding: 0;
-	border: none;
-	background-color: transparent;
-	cursor: pointer;
-	transition: transform 0.2s ease-out;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 
-	&--bigger {
-		width: 24px;
-		height: 24px;
-	}
+    &--bigger {
+        width: 24px;
+        height: 24px;
+    }
 
-	&:focus-visible,
-	&:hover {
-		outline: none;
-		transform: scale(1.2);
-	}
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(198, 12, 12, 0.1);
+        transition: transform 0.2s ease-out;
+    }
 
-	&__icon {
-		width: 100%;
-		height: 100%;
-	}
+    &:focus,
+    &:hover {
+        &::after {
+            transform: translate(-50%, -50%) scale(1);
 
-	@media (max-width: $lg) {
-		width: 26px;
-		height: 26px;
+            @media (max-width: $lg) {
+                transform: translate(-50%, -50%) scale(0);
+            }
+        }
+    }
 
-		&:focus-visible,
-		&:hover {
-			transform: none;
-		}
-	}
+    &__icon {
+        width: 100%;
+        height: 100%;
+    }
+
+    @media (max-width: $lg) {
+        width: 26px;
+        height: 26px;
+    }
 }

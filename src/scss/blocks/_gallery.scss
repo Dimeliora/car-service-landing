@@ -91,9 +91,8 @@
 		transition: color 0.2s ease-out;
 		cursor: pointer;
 
-		&:focus-visible,
+		&:focus,
 		&:hover {
-			outline: none;
 			color: $red-dark;
 		}
 
@@ -124,9 +123,8 @@
 		}
 
 		@media (max-width: $lg) {
-			&:focus-visible,
+			&:focus,
 			&:hover {
-				outline: none;
 				color: $font-dark;
 			}
 		}

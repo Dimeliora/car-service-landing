@@ -1,13 +1,15 @@
 .badge {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 16px;
-	height: 16px;
-	border-radius: 50%;
-	background-color: $red-dark;
-	color: #fff;
-	font-size: 1rem;
-	font-weight: 500;
-	line-height: 1;
+    position: relative;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $red-dark;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1;
 }

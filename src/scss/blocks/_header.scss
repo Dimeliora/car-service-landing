@@ -123,14 +123,13 @@
 		text-decoration: none;
 		transition: color 0.2s ease-out;
 
-		&:focus-visible,
+		&:focus,
 		&:hover {
-			outline: none;
 			color: $red-dark;
 		}
 
 		@media (max-width: $lg) {
-			&:focus-visible,
+			&:focus,
 			&:hover {
 				color: #fff;
 			}

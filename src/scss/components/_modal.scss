@@ -29,17 +29,15 @@
 			fill: #fff;
 		}
 
-		&:focus-visible,
+		&:focus,
 		&:hover {
-			outline: none;
-
 			.icon-button__icon {
 				fill: $red-dark;
 			}
 		}
 
 		@media (max-width: $lg) {
-			&:focus-visible,
+			&:focus,
 			&:hover {
 				.icon-button__icon {
 					fill: #fff;

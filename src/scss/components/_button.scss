@@ -33,10 +33,8 @@
 		transition: width 0.3s ease-out, clip-path 0.3s ease-out;
 	}
 
-	&:focus-visible,
+	&:focus,
 	&:hover {
-		outline: none;
-
 		&::after {
 			clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 			width: 100%;
@@ -49,7 +47,7 @@
 	}
 
 	@media (max-width: $lg) {
-		&:focus-visible,
+		&:focus,
 		&:hover {
 			&::after {
 				clip-path: polygon(33% 0, 100% 0, 100% 100%, 0% 100%);

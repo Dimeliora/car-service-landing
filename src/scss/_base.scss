@@ -1,18 +1,18 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-	font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 body {
-	background-color: $gray-light;
-	font-family: "Roboto", sans-serif;
-	font-size: 1.6rem;
-	font-weight: 400;
+    background-color: $gray-light;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
 }
 
 h1,
@@ -21,16 +21,21 @@ h3,
 p,
 ul,
 li {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
+}
+
+a:focus,
+button:focus {
+    outline: none;
 }
 
 .container {
-	max-width: 1060px;
-	margin: 0 auto;
-	padding: 0 20px;
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .scroll-prevent {
-	overflow-y: hidden;
+    overflow-y: hidden;
 }
