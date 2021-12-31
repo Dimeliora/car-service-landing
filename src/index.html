@@ -1,686 +1,1106 @@
-<!DOCTYPE html><html lang="en"><head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Car Service Landing Page</title>
-		<meta name="description" content="Simple landing page for Car Service. For education purpose">
-		<link rel="stylesheet" href="/styles.css">
-		<script src="https://www.youtube.com/iframe_api" async=""></script>
-		<script src="/script.js" defer=""></script>
-<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
-<link rel="manifest" href="/icons/site.webmanifest">
-<link rel="shortcut icon" href="/icons/favicon.ico">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content="/icons/browserconfig.xml">
-<meta name="theme-color" content="#ffffff"></head>
-	<body>
-		<header class="header">
-			<div class="container">
-				<div class="header__panel">
-					<div class="header__row header__row--upper">
-						<a href="/" class="header__logo">
-							<img src="/images/logo-header.png" alt="Company logo" class="header__logo-image">
-						</a>
-						<div class="header__info">
-							<div class="header__info-col">
-								<svg class="header__info-icon">
-									<use href="/icons/icon-sprite.svg#time"></use>
-								</svg>
-							</div>
-							<div class="header__info-col">
-								<div class="header__info-title">Service hours</div>
-								<div class="header__info-description">
-									Mon - Sat: 7:00 am - 6:00 pm
-								</div>
-							</div>
-						</div>
-						<div class="header__info">
-							<div class="header__info-col">
-								<svg class="header__info-icon">
-									<use href="/icons/icon-sprite.svg#phone"></use>
-								</svg>
-							</div>
-							<div class="header__info-col">
-								<div class="header__info-title">Call us</div>
-								<div class="header__info-description">
-									<a href="tel:5557654321" class="header__info-link">(555) 765-4321</a>
-								</div>
-							</div>
-						</div>
-						<button class="header__panel-button button" data-trigger="appointment-modal">
-							<span class="button__text">Make an Appointment</span>
-						</button>
-						<button class="header__menu-button" aria-label="Menu button">
-							<span></span>
-							<span></span>
-							<span></span>
-						</button>
-					</div>
-					<nav class="header__row header__row--lower" id="header-menu">
-						<ul class="header__menu">
-							<li class="header__menu-item header__menu-item--dropdown">
-								<a href="/" class="header__link">Services</a>
-								<button class="header__submenu-expand-button" aria-label="Expand menu">
-									<svg class="header__submenu-expand-icon">
-										<use href="/icons/icon-sprite.svg#expand"></use>
-									</svg>
-								</button>
-								<ul class="header__submenu">
-									<li class="header__submenu-item">
-										<a href="/" class="header__link">Multi Point Inspections
-										</a>
-									</li>
-									<li class="header__submenu-item">
-										<a href="/" class="header__link">Auto Repair</a>
-									</li>
-									<li class="header__submenu-item">
-										<a href="/" class="header__link">Auto Maintenance</a>
-									</li>
-									<li class="header__submenu-item">
-										<a href="/" class="header__link">Tires </a>
-									</li>
-									<li class="header__submenu-item">
-										<a href="/" class="header__link">Service Warranty</a>
-									</li>
-									<li class="header__submenu-item">
-										<a href="/" class="header__link">Shop Online</a>
-									</li>
-								</ul>
-							</li>
-							<li class="header__menu-item">
-								<a href="/" class="header__link">Specials</a>
-							</li>
-							<li class="header__menu-item">
-								<a href="/" class="header__link">Estimates</a>
-							</li>
-							<li class="header__menu-item">
-								<a href="/" class="header__link">Reviews</a>
-							</li>
-							<li class="header__menu-item header__menu-item--dropdown">
-								<a href="/" class="header__link">Shop</a>
-								<button class="header__submenu-expand-button" aria-label="Expand menu">
-									<svg class="header__submenu-expand-icon">
-										<use href="/icons/icon-sprite.svg#expand"></use>
-									</svg>
-								</button>
-								<ul class="header__submenu">
-									<li class="header__submenu-item">
-										<a href="/" class="header__link">Product category #1</a>
-									</li>
-									<li class="header__submenu-item">
-										<a href="/" class="header__link">Product category #2</a>
-									</li>
-									<li class="header__submenu-item">
-										<a href="/" class="header__link">Product category #3</a>
-									</li>
-									<li class="header__submenu-item">
-										<a href="/" class="header__link">Product category #4</a>
-									</li>
-									<li class="header__submenu-item">
-										<a href="/" class="header__link">Product category #5</a>
-									</li>
-									<li class="header__submenu-item">
-										<a href="/" class="header__link">Product category #6</a>
-									</li>
-								</ul>
-							</li>
-							<li class="header__menu-item">
-								<a href="/" class="header__link">About</a>
-							</li>
-						</ul>
-						<div class="header__icon-buttons">
-							<button class="header__icon-button icon-button" aria-label="Search">
-								<svg class="icon-button__icon">
-									<use href="/icons/icon-sprite.svg#search"></use>
-								</svg>
-							</button>
-							<button class="header__icon-button icon-button" aria-label="Cart">
-								<svg class="icon-button__icon">
-									<use href="/icons/icon-sprite.svg#cart"></use>
-								</svg>
-								<span class="header__cart-badge badge">2</span>
-							</button>
-						</div>
-					</nav>
-				</div>
-				<div class="header__wrapper">
-					<h1 class="header__heading">
-						Top notch service is our main auto motive
-					</h1>
-					<button class="header__button button" data-trigger="appointment-modal">
-						<span class="button__text">Make an Appointment</span>
-					</button>
-				</div>
-			</div>
-		</header>
-		<main>
-			<section class="about">
-				<div class="container">
-					<div class="about__wrapper">
-						<h2 class="about__heading section-heading">Who we are</h2>
-						<div class="about__subheading section-subheading">
-							Nemo enim ipsam voluptatem quia voluptas in proident
-						</div>
-						<p class="about__text">
-							Ut enim ad minima veniam, quis nostrum exercitationem ullam
-							corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-							consequatur. Quis autem vel eum iure reprehenderit qui in ea
-							voluptate velit esse quam nihil molestiae consequatur, vel illum
-							qui dolorem eum fugiat quo voluptas nulla pariatur.
-						</p>
-						<picture>
-							<source srcset="/images/about@1x.webp, /images/about@2x.webp 2x" type="image/webp">
-							<img src="/images/about@1x.jpg" srcset="/images/about@2x.jpg 2x" alt="Car engine photo" class="about__image">
-						</picture>
-					</div>
-				</div>
-			</section>
-			<section class="promise">
-				<div class="container">
-					<h2 class="promise__heading section-heading">Our promise to you</h2>
-					<div class="promise__subheading section-subheading">
-						Sed perspiciatis omnis iste natus
-					</div>
-					<div class="promise__items">
-						<div class="promise-card">
-							<div class="promise-card__image">
-								<svg class="promise-card__icon">
-									<use href="/icons/icon-sprite.svg#car-service"></use>
-								</svg>
-							</div>
-							<div class="promise-card__info">
-								<h3 class="promise-card__title">Quality service. Everytime.</h3>
-								<p class="promise-card__text">
-									At vero eos et accusamus et iusto odio dignissimos ducimus qui
-									blanditiis praesentium corrupti quos dolores et quas.
-								</p>
-							</div>
-						</div>
-						<div class="promise-card">
-							<div class="promise-card__image">
-								<svg class="promise-card__icon">
-									<use href="/icons/icon-sprite.svg#car-certified"></use>
-								</svg>
-							</div>
-							<div class="promise-card__info">
-								<h3 class="promise-card__title">Services by certified pros</h3>
-								<p class="promise-card__text">
-									Dolorem ipsum quia dolor sit amet, consectetur, adipisci
-									velit, sed quia non numquam eius modi tempora incidunt.
-								</p>
-							</div>
-						</div>
-						<div class="promise-card">
-							<div class="promise-card__image">
-								<svg class="promise-card__icon">
-									<use href="/icons/icon-sprite.svg#car-team"></use>
-								</svg>
-							</div>
-							<div class="promise-card__info">
-								<h3 class="promise-card__title">Real people. Honest work.</h3>
-								<p class="promise-card__text">
-									Quis autem vel eum iure reprehenderit qui in ea voluptate
-									velit esse quam nihil molestiae consequatur illum.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="video">
-				<div class="container">
-					<div class="video__wrapper">
-						<h2 class="video__heading">
-							Nemo enim ipsam voluptatem quia voluptas in proident
-						</h2>
-						<button class="video__play-button" aria-label="Video play button" data-trigger="video-modal" data-video="Go59qu1Ugtk">
-							<svg class="video__play-icon">
-								<use href="/icons/icon-sprite.svg#arrow-play"></use>
-							</svg>
-						</button>
-					</div>
-				</div>
-				<div class="video__modal modal" id="video-modal">
-					<div class="modal__content">
-						<button class="modal__close icon-button" aria-label="Close modal">
-							<svg class="icon-button__icon">
-								<use href="/icons/icon-sprite.svg#close"></use>
-							</svg>
-						</button>
-						<div class="video__player" id="video-frame">
-							<div class="video__error">
-								<h2 class="video__error-title">Ошибка</h2>
-								<p class="video__error-description">
-									Во время загрузки видеопроигрывателя возникла ошибка <br>
-									Повторите попытку позже
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="services">
-				<div class="container">
-					<h2 class="services__heading section-heading">Our services</h2>
-					<div class="services__subheading section-subheading">
-						Sed perspiciatis omnis iste natus
-					</div>
-					<div class="services__items">
-						<div class="services-card">
-							<svg class="services-card__icon">
-								<use href="/icons/icon-sprite.svg#car-bay"></use>
-							</svg>
-							<h3 class="services-card__title">Multi Point Inspections</h3>
-							<p class="services-card__text">
-								At vero eos et accusamus et iusto odio dignissimos ducimus qui
-								blanditiis praesentium corrupti quos dolores et quas.
-							</p>
-						</div>
-						<div class="services-card">
-							<svg class="services-card__icon">
-								<use href="/icons/icon-sprite.svg#car-engine"></use>
-							</svg>
-							<h3 class="services-card__title">Auto Repair</h3>
-							<p class="services-card__text">
-								At vero eos et accusamus et iusto odio dignissimos ducimus qui
-								blanditiis praesentium corrupti quos dolores et quas.
-							</p>
-						</div>
-						<div class="services-card">
-							<svg class="services-card__icon">
-								<use href="/icons/icon-sprite.svg#car-breaks"></use>
-							</svg>
-							<h3 class="services-card__title">Auto Maintenance</h3>
-							<p class="services-card__text">
-								At vero eos et accusamus et iusto odio dignissimos ducimus qui
-								blanditiis praesentium corrupti quos dolores et quas.
-							</p>
-						</div>
-						<div class="services-card">
-							<svg class="services-card__icon">
-								<use href="/icons/icon-sprite.svg#car-tires"></use>
-							</svg>
-							<h3 class="services-card__title">Tires</h3>
-							<p class="services-card__text">
-								At vero eos et accusamus et iusto odio dignissimos ducimus qui
-								blanditiis praesentium corrupti quos dolores et quas.
-							</p>
-						</div>
-						<div class="services-card">
-							<svg class="services-card__icon">
-								<use href="/icons/icon-sprite.svg#car-engine-check"></use>
-							</svg>
-							<h3 class="services-card__title">Service Warranty</h3>
-							<p class="services-card__text">
-								At vero eos et accusamus et iusto odio dignissimos ducimus qui
-								blanditiis praesentium corrupti quos dolores et quas.
-							</p>
-						</div>
-						<div class="services-card">
-							<svg class="services-card__icon">
-								<use href="/icons/icon-sprite.svg#car-shopping"></use>
-							</svg>
-							<h3 class="services-card__title">Shop Online</h3>
-							<p class="services-card__text">
-								At vero eos et accusamus et iusto odio dignissimos ducimus qui
-								blanditiis praesentium corrupti quos dolores et quas.
-							</p>
-						</div>
-					</div>
-					<a href="/" class="services__button button button--link">
-						<span class="button__text">Learn more</span>
-					</a>
-				</div>
-			</section>
-			<section class="appointment">
-				<div class="container">
-					<div class="appointment__wrapper">
-						<div class="appointment__form-wrapper">
-							<h2 class="appointment__heading">Make an appointment</h2>
-							<form class="appointment__form">
-								<div class="appointment__form-fields">
-									<input type="text" name="name" class="appointment__form-input" placeholder="Name" aria-label="Name" required="">
-									<input type="email" name="email" class="appointment__form-input" placeholder="Email" aria-label="Email" required="">
-									<input type="tel" name="phone" class="appointment__form-input" placeholder="Phone Number" aria-label="Phone Number" required="">
-									<select name="service" class="appointment__form-select" aria-label="Service" required="">
-										<option hidden="" selected="" value="">Select Service</option>
-										<option value="foo">Auto Repair</option>
-										<option value="bar">Auto Maintenance</option>
-										<option value="bar">Tires</option>
-										<option value="bar">Service Warranty</option>
-										<option value="bar">Shop Online</option>
-									</select>
-									<textarea name="needing-services" class="appointment__form-textarea" placeholder="Tell us about the car needing service(s)" aria-label="Car needing service(s)"></textarea>
-								</div>
-								<button class="appointment__form-button button">
-									<span class="button__text">Make an appointment</span>
-								</button>
-							</form>
-						</div>
-						<div class="appointment__counter">
-							<div class="appointment__counter-title">
-								Maxime placeat facere possimus omnis
-							</div>
-							<div class="appointment__counter-value" id="counter">0+</div>
-							<div class="appointment__counter-description">
-								customers served (and counting)
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="appointment__modal modal" id="appointment-modal">
-					<div class="modal__content">
-						<button class="modal__close icon-button" aria-label="Close modal">
-							<svg class="icon-button__icon">
-								<use href="/icons/icon-sprite.svg#close"></use>
-							</svg>
-						</button>
-						<div class="appointment__modal-form">
-							<h2 class="appointment__heading">Make an appointment</h2>
-							<form class="appointment__form">
-								<div class="appointment__form-fields">
-									<input type="text" name="name" class="appointment__form-input" placeholder="Name" aria-label="Name" required="">
-									<input type="email" name="email" class="appointment__form-input" placeholder="Email" aria-label="Email" required="">
-									<input type="tel" name="phone" class="appointment__form-input" placeholder="Phone Number" aria-label="Phone Number" required="">
-									<select name="service" class="appointment__form-select" aria-label="Service" required="">
-										<option hidden="" selected="" value="">Select Service</option>
-										<option value="foo">Auto Repair</option>
-										<option value="bar">Auto Maintenance</option>
-										<option value="bar">Tires</option>
-										<option value="bar">Service Warranty</option>
-										<option value="bar">Shop Online</option>
-									</select>
-									<textarea name="needing-services" class="appointment__form-textarea" placeholder="Tell us about the car needing service(s)" aria-label="Car needing service(s)"></textarea>
-								</div>
-								<button class="appointment__form-button button">
-									<span class="button__text">Make an appointment</span>
-								</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="gallery">
-				<div class="container">
-					<div class="gallery__wrapper">
-						<h2 class="gallery__heading section-heading">
-							Gallery &amp; Live streams
-						</h2>
-						<div class="gallery__subheading section-subheading">
-							Check out our hard workers
-						</div>
-						<div class="gallery__tabs">
-							<button class="gallery__tab-button">Gallery</button>
-							<button class="
-									gallery__tab-button
-									gallery__tab-button--active
-									gallery__tab-button--stream
-									gallery__tab-button--online
-								">
-								Live stream: Bay 1
-							</button>
-							<button class="
-									gallery__tab-button
-									gallery__tab-button--stream
-									gallery__tab-button--online
-								">
-								Live stream: Bay 2
-							</button>
-							<button class="gallery__tab-button gallery__tab-button--stream">
-								Live stream: Bay 3
-							</button>
-						</div>
-						<div class="gallery__view">
-							<div class="gallery__item">
-								<picture>
-									<source srcset="
-											/images/gallery-1@1x.webp,
-											/images/gallery-1@2x.webp
-										" type="image/webp">
-									<img src="/images/gallery-1@1x.jpg" srcset="/images/gallery-1@2x.jpg 2x" alt="Live stream snapshot" class="gallery__image">
-								</picture>
-							</div>
-							<div class="gallery__item gallery__item--live">
-								<picture>
-									<source srcset="
-											/images/gallery-2@1x.webp,
-											/images/gallery-2@2x.webp
-										" type="image/webp">
-									<img src="/images/gallery-2@1x.jpg" srcset="/images/gallery-2@2x.jpg 2x" alt="Live stream snapshot" class="gallery__image">
-								</picture>
-							</div>
-							<div class="gallery__item gallery__item--live">
-								<picture>
-									<source srcset="
-											/images/gallery-3@1x.webp,
-											/images/gallery-3@2x.webp
-										" type="image/webp">
-									<img src="/images/gallery-3@1x.jpg" srcset="/images/gallery-3@2x.jpg 2x" alt="Live stream snapshot" class="gallery__image">
-								</picture>
-							</div>
-							<div class="gallery__item">
-								<picture>
-									<source srcset="/images/gallery-no-signal.webp" type="image/webp">
-									<img src="/images/gallery-no-signal.jpg" alt="Live stream snapshot" class="gallery__image">
-								</picture>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="customers">
-				<div class="container">
-					<div class="customers__wrapper">
-						<div class="customers__title">
-							<h2 class="customers__heading section-heading">Our customers</h2>
-							<div class="customers__subheading section-subheading">
-								Illum qui dolorem eum quo voluptas ut distinctio
-							</div>
-						</div>
-						<div class="customers-card">
-							<p class="customers-card__text">
-								“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore ex magna aliqua.
-								Ut enim illum ad minim veniam, quis ea exercitation ullamco
-								cillum ut enim dolore.”
-							</p>
-							<div class="customers-card__user">
-								<picture>
-									<source srcset="
-											/images/customers-1@1x.webp,
-											/images/customers-1@2x.webp 2x
-										" type="image/webp">
-									<img src="/images/customers-1@1x.jpg" srcset="/images/customers-1@2x.jpg 2x" alt="Customer avatar" class="customers-card__image">
-								</picture>
-								<div class="customers-card__username">Cullen Bohannon</div>
-							</div>
-						</div>
-						<div class="customers-card">
-							<p class="customers-card__text">
-								“Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-								accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-								quae ab illo inventore veritatis et quasi ipsam voluptatem
-								aspernatur.”
-							</p>
-							<div class="customers-card__user">
-								<picture>
-									<source srcset="
-											/images/customers-2@1x.webp,
-											/images/customers-2@2x.webp 2x
-										" type="image/webp">
-									<img src="/images/customers-2@1x.jpg" srcset="/images/customers-2@2x.jpg 2x" alt="Customer avatar" class="customers-card__image">
-								</picture>
-								<div class="customers-card__username">Jennifer Thomas</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="impact">
-				<div class="container">
-					<div class="impact__wrapper">
-						<h2 class="impact__heading section-heading section-heading--light">
-							Our impact
-						</h2>
-						<div class="impact__subheading section-subheading">
-							Nemo enim ipsam voluptatem quia voluptas
-						</div>
-						<picture>
-							<source srcset="/images/impact-1@1x.webp, /images/impact-1@2x.webp 2x" type="image/webp">
-							<img src="/images/impact-1@1x.jpg" srcset="/images/impact-1@2x.jpg 2x" alt="Car" class="impact__image">
-						</picture>
-						<div class="impact__stats">
-							<div class="impact-item">
-								<div class="impact-item__image">
-									<svg class="impact-item__icon">
-										<use href="/icons/icon-sprite.svg#car-oil"></use>
-									</svg>
-								</div>
-								<div class="impact-item__info">
-									<div class="impact-item__value">16k+</div>
-									<div class="impact-item__description">Oil changes</div>
-								</div>
-							</div>
-							<div class="impact-item">
-								<div class="impact-item__image">
-									<svg class="impact-item__icon">
-										<use href="/icons/icon-sprite.svg#car-transmission"></use>
-									</svg>
-								</div>
-								<div class="impact-item__info">
-									<div class="impact-item__value">13k+</div>
-									<div class="impact-item__description">
-										Transmission repairs
-									</div>
-								</div>
-							</div>
-							<div class="impact-item">
-								<div class="impact-item__image">
-									<svg class="impact-item__icon">
-										<use href="/icons/icon-sprite.svg#car-alignment"></use>
-									</svg>
-								</div>
-								<div class="impact-item__info">
-									<div class="impact-item__value">15k+</div>
-									<div class="impact-item__description">Alignments made</div>
-								</div>
-							</div>
-							<div class="impact-item">
-								<div class="impact-item__image">
-									<svg class="impact-item__icon">
-										<use href="/icons/icon-sprite.svg#car-engine-2"></use>
-									</svg>
-								</div>
-								<div class="impact-item__info">
-									<div class="impact-item__value">11,500+</div>
-									<div class="impact-item__description">Engines repaired</div>
-								</div>
-							</div>
-						</div>
-						<div class="impact__appointment">
-							<div class="impact__appointment-text">
-								Sed do eiusmod tempor incididunt ut labore et dolore magna
-								aliqua
-							</div>
-							<button class="impact__appointment-button button" data-trigger="appointment-modal">
-								<span class="button__text">Make an appointment</span>
-							</button>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
-		<footer class="footer">
-			<div class="container">
-				<div class="footer__top">
-					<div class="footer__col footer__col--about">
-						<a href="/" class="footer__logo"><img src="/images/logo-footer.png" alt="Company logo" class="footer__logo-image"></a>
-						<div class="footer__about">
-							This is a blurb about the company sed do eiusmod tempor incididunt
-							ut labore et dolore ex magna aliqua.
-						</div>
-						<div class="footer__socials">
-							<a href="/" class="footer__social-link icon-button icon-button--bigger" aria-label="facebook">
-								<svg class="icon-button__icon">
-									<use href="/icons/icon-sprite.svg#facebook"></use>
-								</svg>
-							</a>
-							<a href="/" class="footer__social-link icon-button icon-button--bigger" aria-label="twitter">
-								<svg class="icon-button__icon">
-									<use href="/icons/icon-sprite.svg#twitter"></use>
-								</svg>
-							</a>
-							<a href="/" class="footer__social-link icon-button icon-button--bigger" aria-label="instagram">
-								<svg class="icon-button__icon">
-									<use href="/icons/icon-sprite.svg#instagram"></use>
-								</svg>
-							</a>
-							<a href="/" class="footer__social-link icon-button icon-button--bigger" aria-label="youtube">
-								<svg class="icon-button__icon">
-									<use href="/icons/icon-sprite.svg#youtube"></use>
-								</svg>
-							</a>
-						</div>
-					</div>
-					<div class="footer__col footer__col--links">
-						<h3 class="footer__subheding">Explore links</h3>
-						<div class="footer__links">
-							<div class="footer__links-col">
-								<a href="/" class="footer__link-item">About</a>
-								<a href="/" class="footer__link-item">Services</a>
-								<a href="/" class="footer__link-item">Specials</a>
-								<a href="/" class="footer__link-item">Estimates</a>
-							</div>
-							<div class="footer__links-col">
-								<a href="/" class="footer__link-item">Reviews</a>
-								<a href="/" class="footer__link-item">Shop</a>
-								<a href="/" class="footer__link-item">Careers</a>
-								<a href="/" class="footer__link-item">FAQs</a>
-							</div>
-						</div>
-					</div>
-					<div class="footer__col footer__col--contacts">
-						<h3 class="footer__subheding">Contact</h3>
-						<ul class="footer__contacts-list">
-							<li class="footer__contacts-item">
-								<svg class="footer__contacts-icon">
-									<use href="/icons/icon-sprite.svg#place"></use>
-								</svg>
-								<span class="footer__contacts-text">321 Pikes Place Parkway Seattle, WA 54321</span>
-							</li>
-							<li class="footer__contacts-item">
-								<svg class="footer__contacts-icon">
-									<use href="/icons/icon-sprite.svg#smartphone"></use>
-								</svg>
-								<a href="tel:5557654321" class="footer__contacts-link">(555) 765-4321</a>
-							</li>
-							<li class="footer__contacts-item">
-								<svg class="footer__contacts-icon">
-									<use href="/icons/icon-sprite.svg#email"></use>
-								</svg>
-								<a href="mailto:info@company.com" class="footer__contacts-link">Info@company.com</a>
-							</li>
-							<li class="footer__contacts-item">
-								<svg class="footer__contacts-icon">
-									<use href="/icons/icon-sprite.svg#alarm-clock"></use>
-								</svg>
-								<span class="footer__contacts-text">Mon - Sat: 7:00 am - 6:00 pm</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="footer__bottom">
-					<div class="footer__bottom-wrapper">
-						<span class="footer__tagline">
-							Tagline lorem ipsum dolor sit amet, consectetur adipiscing eiusmod
-						</span>
-						<span class="footer__copyright">© 2018 Company.</span>
-						<a href="/" class="footer__privacy-link">Privacy Policy</a>
-						<a href="/" class="footer__privacy-link">Terms &amp; Conditions</a>
-					</div>
-				</div>
-			</div>
-		</footer>
-</body></html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Car Service Landing Page</title>
+        <meta
+            name="description"
+            content="Simple landing page for Car Service. For education purpose"
+        />
+        <link rel="stylesheet" href="/styles.css" />
+        <script src="https://www.youtube.com/iframe_api" async=""></script>
+        <script src="/script.js" defer=""></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="header__panel">
+                    <div class="header__row header__row--upper">
+                        <a href="/" class="header__logo">
+                            <img
+                                src="/images/logo-header.png"
+                                alt="Company logo"
+                                class="header__logo-image"
+                            />
+                        </a>
+                        <div class="header__info">
+                            <div class="header__info-col">
+                                <svg class="header__info-icon">
+                                    <use
+                                        href="/icons/icon-sprite.svg#time"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <div class="header__info-col">
+                                <div class="header__info-title">
+                                    Service hours
+                                </div>
+                                <div class="header__info-description">
+                                    Mon - Sat: 7:00 am - 6:00 pm
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__info">
+                            <div class="header__info-col">
+                                <svg class="header__info-icon">
+                                    <use
+                                        href="/icons/icon-sprite.svg#phone"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <div class="header__info-col">
+                                <div class="header__info-title">Call us</div>
+                                <div class="header__info-description">
+                                    <a
+                                        href="tel:5557654321"
+                                        class="header__info-link"
+                                        >(555) 765-4321</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="header__panel-button button"
+                            data-trigger="appointment-modal"
+                        >
+                            <span class="button__text"
+                                >Make an Appointment</span
+                            >
+                        </button>
+                        <button
+                            class="header__menu-button"
+                            aria-label="Menu button"
+                        >
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <nav
+                        class="header__row header__row--lower"
+                        id="header-menu"
+                    >
+                        <ul class="header__menu">
+                            <li
+                                class="
+                                    header__menu-item
+                                    header__menu-item--dropdown
+                                "
+                            >
+                                <a href="/" class="header__link">Services</a>
+                                <button
+                                    class="header__submenu-expand-button"
+                                    aria-label="Expand menu"
+                                >
+                                    <svg class="header__submenu-expand-icon">
+                                        <use
+                                            href="/icons/icon-sprite.svg#expand"
+                                        ></use>
+                                    </svg>
+                                </button>
+                                <ul class="header__submenu">
+                                    <li class="header__submenu-item">
+                                        <a href="/" class="header__link"
+                                            >Multi Point Inspections
+                                        </a>
+                                    </li>
+                                    <li class="header__submenu-item">
+                                        <a href="/" class="header__link"
+                                            >Auto Repair</a
+                                        >
+                                    </li>
+                                    <li class="header__submenu-item">
+                                        <a href="/" class="header__link"
+                                            >Auto Maintenance</a
+                                        >
+                                    </li>
+                                    <li class="header__submenu-item">
+                                        <a href="/" class="header__link"
+                                            >Tires
+                                        </a>
+                                    </li>
+                                    <li class="header__submenu-item">
+                                        <a href="/" class="header__link"
+                                            >Service Warranty</a
+                                        >
+                                    </li>
+                                    <li class="header__submenu-item">
+                                        <a href="/" class="header__link"
+                                            >Shop Online</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="/" class="header__link">Specials</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="/" class="header__link">Estimates</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="/" class="header__link">Reviews</a>
+                            </li>
+                            <li
+                                class="
+                                    header__menu-item
+                                    header__menu-item--dropdown
+                                "
+                            >
+                                <a href="/" class="header__link">Shop</a>
+                                <button
+                                    class="header__submenu-expand-button"
+                                    aria-label="Expand menu"
+                                >
+                                    <svg class="header__submenu-expand-icon">
+                                        <use
+                                            href="/icons/icon-sprite.svg#expand"
+                                        ></use>
+                                    </svg>
+                                </button>
+                                <ul class="header__submenu">
+                                    <li class="header__submenu-item">
+                                        <a href="/" class="header__link"
+                                            >Product category #1</a
+                                        >
+                                    </li>
+                                    <li class="header__submenu-item">
+                                        <a href="/" class="header__link"
+                                            >Product category #2</a
+                                        >
+                                    </li>
+                                    <li class="header__submenu-item">
+                                        <a href="/" class="header__link"
+                                            >Product category #3</a
+                                        >
+                                    </li>
+                                    <li class="header__submenu-item">
+                                        <a href="/" class="header__link"
+                                            >Product category #4</a
+                                        >
+                                    </li>
+                                    <li class="header__submenu-item">
+                                        <a href="/" class="header__link"
+                                            >Product category #5</a
+                                        >
+                                    </li>
+                                    <li class="header__submenu-item">
+                                        <a href="/" class="header__link"
+                                            >Product category #6</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="/" class="header__link">About</a>
+                            </li>
+                        </ul>
+                        <div class="header__icon-buttons">
+                            <button
+                                class="header__icon-button icon-button"
+                                aria-label="Search"
+                            >
+                                <svg class="icon-button__icon">
+                                    <use
+                                        href="/icons/icon-sprite.svg#search"
+                                    ></use>
+                                </svg>
+                            </button>
+                            <button
+                                class="header__icon-button icon-button"
+                                aria-label="Cart"
+                            >
+                                <svg class="icon-button__icon">
+                                    <use
+                                        href="/icons/icon-sprite.svg#cart"
+                                    ></use>
+                                </svg>
+                                <span class="header__cart-badge badge">2</span>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+                <div class="header__wrapper">
+                    <h1 class="header__heading">
+                        Top notch service is our main auto motive
+                    </h1>
+                    <button
+                        class="header__button button"
+                        data-trigger="appointment-modal"
+                    >
+                        <span class="button__text">Make an Appointment</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="about">
+                <div class="container">
+                    <div class="about__wrapper">
+                        <h2 class="about__heading section-heading">
+                            Who we are
+                        </h2>
+                        <div class="about__subheading section-subheading">
+                            Nemo enim ipsam voluptatem quia voluptas in proident
+                        </div>
+                        <p class="about__text">
+                            Ut enim ad minima veniam, quis nostrum
+                            exercitationem ullam corporis suscipit laboriosam,
+                            nisi ut aliquid ex ea commodi consequatur. Quis
+                            autem vel eum iure reprehenderit qui in ea voluptate
+                            velit esse quam nihil molestiae consequatur, vel
+                            illum qui dolorem eum fugiat quo voluptas nulla
+                            pariatur.
+                        </p>
+                        <picture>
+                            <source
+                                srcset="
+                                    /images/about@1x.webp,
+                                    /images/about@2x.webp 2x
+                                "
+                                type="image/webp"
+                            />
+                            <img
+                                src="/images/about@1x.jpg"
+                                srcset="/images/about@2x.jpg 2x"
+                                alt="Car engine photo"
+                                class="about__image"
+                            />
+                        </picture>
+                    </div>
+                </div>
+            </section>
+            <section class="promise">
+                <div class="container">
+                    <h2 class="promise__heading section-heading">
+                        Our promise to you
+                    </h2>
+                    <div class="promise__subheading section-subheading">
+                        Sed perspiciatis omnis iste natus
+                    </div>
+                    <div class="promise__items">
+                        <div class="promise-card">
+                            <div class="promise-card__image">
+                                <svg class="promise-card__icon">
+                                    <use
+                                        href="/icons/icon-sprite.svg#car-service"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <div class="promise-card__info">
+                                <h3 class="promise-card__title">
+                                    Quality service. Everytime.
+                                </h3>
+                                <p class="promise-card__text">
+                                    At vero eos et accusamus et iusto odio
+                                    dignissimos ducimus qui blanditiis
+                                    praesentium corrupti quos dolores et quas.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="promise-card">
+                            <div class="promise-card__image">
+                                <svg class="promise-card__icon">
+                                    <use
+                                        href="/icons/icon-sprite.svg#car-certified"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <div class="promise-card__info">
+                                <h3 class="promise-card__title">
+                                    Services by certified pros
+                                </h3>
+                                <p class="promise-card__text">
+                                    Dolorem ipsum quia dolor sit amet,
+                                    consectetur, adipisci velit, sed quia non
+                                    numquam eius modi tempora incidunt.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="promise-card">
+                            <div class="promise-card__image">
+                                <svg class="promise-card__icon">
+                                    <use
+                                        href="/icons/icon-sprite.svg#car-team"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <div class="promise-card__info">
+                                <h3 class="promise-card__title">
+                                    Real people. Honest work.
+                                </h3>
+                                <p class="promise-card__text">
+                                    Quis autem vel eum iure reprehenderit qui in
+                                    ea voluptate velit esse quam nihil molestiae
+                                    consequatur illum.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="video">
+                <div class="container">
+                    <div class="video__wrapper">
+                        <h2 class="video__heading">
+                            Nemo enim ipsam voluptatem quia voluptas in proident
+                        </h2>
+                        <button
+                            class="video__play-button"
+                            aria-label="Video play button"
+                            data-trigger="video-modal"
+                            data-video="Go59qu1Ugtk"
+                        >
+                            <svg class="video__play-icon">
+                                <use
+                                    href="/icons/icon-sprite.svg#arrow-play"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="video__modal modal" id="video-modal">
+                    <div class="modal__content">
+                        <button
+                            class="modal__close icon-button"
+                            aria-label="Close modal"
+                        >
+                            <svg class="icon-button__icon">
+                                <use href="/icons/icon-sprite.svg#close"></use>
+                            </svg>
+                        </button>
+                        <div class="video__player" id="video-frame">
+                            <div class="video__error">
+                                <h2 class="video__error-title">Ошибка</h2>
+                                <p class="video__error-description">
+                                    Во время загрузки видеопроигрывателя
+                                    возникла ошибка <br />
+                                    Повторите попытку позже
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="services">
+                <div class="container">
+                    <h2 class="services__heading section-heading">
+                        Our services
+                    </h2>
+                    <div class="services__subheading section-subheading">
+                        Sed perspiciatis omnis iste natus
+                    </div>
+                    <div class="services__items">
+                        <div class="services-card">
+                            <svg class="services-card__icon">
+                                <use
+                                    href="/icons/icon-sprite.svg#car-bay"
+                                ></use>
+                            </svg>
+                            <h3 class="services-card__title">
+                                Multi Point Inspections
+                            </h3>
+                            <p class="services-card__text">
+                                At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui blanditiis praesentium
+                                corrupti quos dolores et quas.
+                            </p>
+                        </div>
+                        <div class="services-card">
+                            <svg class="services-card__icon">
+                                <use
+                                    href="/icons/icon-sprite.svg#car-engine"
+                                ></use>
+                            </svg>
+                            <h3 class="services-card__title">Auto Repair</h3>
+                            <p class="services-card__text">
+                                At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui blanditiis praesentium
+                                corrupti quos dolores et quas.
+                            </p>
+                        </div>
+                        <div class="services-card">
+                            <svg class="services-card__icon">
+                                <use
+                                    href="/icons/icon-sprite.svg#car-breaks"
+                                ></use>
+                            </svg>
+                            <h3 class="services-card__title">
+                                Auto Maintenance
+                            </h3>
+                            <p class="services-card__text">
+                                At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui blanditiis praesentium
+                                corrupti quos dolores et quas.
+                            </p>
+                        </div>
+                        <div class="services-card">
+                            <svg class="services-card__icon">
+                                <use
+                                    href="/icons/icon-sprite.svg#car-tires"
+                                ></use>
+                            </svg>
+                            <h3 class="services-card__title">Tires</h3>
+                            <p class="services-card__text">
+                                At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui blanditiis praesentium
+                                corrupti quos dolores et quas.
+                            </p>
+                        </div>
+                        <div class="services-card">
+                            <svg class="services-card__icon">
+                                <use
+                                    href="/icons/icon-sprite.svg#car-engine-check"
+                                ></use>
+                            </svg>
+                            <h3 class="services-card__title">
+                                Service Warranty
+                            </h3>
+                            <p class="services-card__text">
+                                At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui blanditiis praesentium
+                                corrupti quos dolores et quas.
+                            </p>
+                        </div>
+                        <div class="services-card">
+                            <svg class="services-card__icon">
+                                <use
+                                    href="/icons/icon-sprite.svg#car-shopping"
+                                ></use>
+                            </svg>
+                            <h3 class="services-card__title">Shop Online</h3>
+                            <p class="services-card__text">
+                                At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui blanditiis praesentium
+                                corrupti quos dolores et quas.
+                            </p>
+                        </div>
+                    </div>
+                    <a href="/" class="services__button button button--link">
+                        <span class="button__text">Learn more</span>
+                    </a>
+                </div>
+            </section>
+            <section class="appointment">
+                <div class="container">
+                    <div class="appointment__wrapper">
+                        <div class="appointment__form-wrapper">
+                            <h2 class="appointment__heading">
+                                Make an appointment
+                            </h2>
+                            <form class="appointment__form">
+                                <div class="appointment__form-fields">
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        class="appointment__form-input"
+                                        placeholder="Name"
+                                        aria-label="Name"
+                                        required=""
+                                    />
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        class="appointment__form-input"
+                                        placeholder="Email"
+                                        aria-label="Email"
+                                        required=""
+                                    />
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        class="appointment__form-input"
+                                        placeholder="Phone Number"
+                                        aria-label="Phone Number"
+                                        required=""
+                                    />
+                                    <select
+                                        name="service"
+                                        class="appointment__form-select"
+                                        aria-label="Service"
+                                        required=""
+                                    >
+                                        <option hidden="" selected="" value="">
+                                            Select Service
+                                        </option>
+                                        <option value="foo">Auto Repair</option>
+                                        <option value="bar">
+                                            Auto Maintenance
+                                        </option>
+                                        <option value="bar">Tires</option>
+                                        <option value="bar">
+                                            Service Warranty
+                                        </option>
+                                        <option value="bar">Shop Online</option>
+                                    </select>
+                                    <textarea
+                                        name="needing-services"
+                                        class="appointment__form-textarea"
+                                        placeholder="Tell us about the car needing service(s)"
+                                        aria-label="Car needing service(s)"
+                                    ></textarea>
+                                </div>
+                                <button class="appointment__form-button button">
+                                    <span class="button__text"
+                                        >Make an appointment</span
+                                    >
+                                </button>
+                            </form>
+                        </div>
+                        <div class="appointment__counter">
+                            <div class="appointment__counter-title">
+                                Maxime placeat facere possimus omnis
+                            </div>
+                            <div
+                                class="appointment__counter-value"
+                                id="counter"
+                            >
+                                0+
+                            </div>
+                            <div class="appointment__counter-description">
+                                customers served (and counting)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="appointment__modal modal" id="appointment-modal">
+                    <div class="modal__content">
+                        <button
+                            class="modal__close icon-button"
+                            aria-label="Close modal"
+                        >
+                            <svg class="icon-button__icon">
+                                <use href="/icons/icon-sprite.svg#close"></use>
+                            </svg>
+                        </button>
+                        <div class="appointment__modal-form">
+                            <h2 class="appointment__heading">
+                                Make an appointment
+                            </h2>
+                            <form class="appointment__form">
+                                <div class="appointment__form-fields">
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        class="appointment__form-input"
+                                        placeholder="Name"
+                                        aria-label="Name"
+                                        required=""
+                                    />
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        class="appointment__form-input"
+                                        placeholder="Email"
+                                        aria-label="Email"
+                                        required=""
+                                    />
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        class="appointment__form-input"
+                                        placeholder="Phone Number"
+                                        aria-label="Phone Number"
+                                        required=""
+                                    />
+                                    <select
+                                        name="service"
+                                        class="appointment__form-select"
+                                        aria-label="Service"
+                                        required=""
+                                    >
+                                        <option hidden="" selected="" value="">
+                                            Select Service
+                                        </option>
+                                        <option value="foo">Auto Repair</option>
+                                        <option value="bar">
+                                            Auto Maintenance
+                                        </option>
+                                        <option value="bar">Tires</option>
+                                        <option value="bar">
+                                            Service Warranty
+                                        </option>
+                                        <option value="bar">Shop Online</option>
+                                    </select>
+                                    <textarea
+                                        name="needing-services"
+                                        class="appointment__form-textarea"
+                                        placeholder="Tell us about the car needing service(s)"
+                                        aria-label="Car needing service(s)"
+                                    ></textarea>
+                                </div>
+                                <button class="appointment__form-button button">
+                                    <span class="button__text"
+                                        >Make an appointment</span
+                                    >
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="gallery">
+                <div class="container">
+                    <div class="gallery__wrapper">
+                        <h2 class="gallery__heading section-heading">
+                            Gallery &amp; Live streams
+                        </h2>
+                        <div class="gallery__subheading section-subheading">
+                            Check out our hard workers
+                        </div>
+                        <div class="gallery__tabs">
+                            <button class="gallery__tab-button">Gallery</button>
+                            <button
+                                class="
+                                    gallery__tab-button
+                                    gallery__tab-button--active
+                                    gallery__tab-button--stream
+                                    gallery__tab-button--online
+                                "
+                            >
+                                Live stream: Bay 1
+                            </button>
+                            <button
+                                class="
+                                    gallery__tab-button
+                                    gallery__tab-button--stream
+                                    gallery__tab-button--online
+                                "
+                            >
+                                Live stream: Bay 2
+                            </button>
+                            <button
+                                class="
+                                    gallery__tab-button
+                                    gallery__tab-button--stream
+                                "
+                            >
+                                Live stream: Bay 3
+                            </button>
+                        </div>
+                        <div class="gallery__view">
+                            <div class="gallery__item">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            /images/gallery-1@1x.webp,
+                                            /images/gallery-1@2x.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="/images/gallery-1@1x.jpg"
+                                        srcset="/images/gallery-1@2x.jpg 2x"
+                                        alt="Live stream snapshot"
+                                        class="gallery__image"
+                                    />
+                                </picture>
+                            </div>
+                            <div class="gallery__item gallery__item--live">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            /images/gallery-2@1x.webp,
+                                            /images/gallery-2@2x.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="/images/gallery-2@1x.jpg"
+                                        srcset="/images/gallery-2@2x.jpg 2x"
+                                        alt="Live stream snapshot"
+                                        class="gallery__image"
+                                    />
+                                </picture>
+                            </div>
+                            <div class="gallery__item gallery__item--live">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            /images/gallery-3@1x.webp,
+                                            /images/gallery-3@2x.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="/images/gallery-3@1x.jpg"
+                                        srcset="/images/gallery-3@2x.jpg 2x"
+                                        alt="Live stream snapshot"
+                                        class="gallery__image"
+                                    />
+                                </picture>
+                            </div>
+                            <div class="gallery__item">
+                                <picture>
+                                    <source
+                                        srcset="/images/gallery-no-signal.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="/images/gallery-no-signal.jpg"
+                                        alt="Live stream snapshot"
+                                        class="gallery__image"
+                                    />
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="customers">
+                <div class="container">
+                    <div class="customers__wrapper">
+                        <div class="customers__title">
+                            <h2 class="customers__heading section-heading">
+                                Our customers
+                            </h2>
+                            <div
+                                class="customers__subheading section-subheading"
+                            >
+                                Illum qui dolorem eum quo voluptas ut distinctio
+                            </div>
+                        </div>
+                        <div class="customers-card">
+                            <p class="customers-card__text">
+                                “Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore ex magna aliqua.
+                                Ut enim illum ad minim veniam, quis ea
+                                exercitation ullamco cillum ut enim dolore.”
+                            </p>
+                            <div class="customers-card__user">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            /images/customers-1@1x.webp,
+                                            /images/customers-1@2x.webp 2x
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="/images/customers-1@1x.jpg"
+                                        srcset="/images/customers-1@2x.jpg 2x"
+                                        alt="Customer avatar"
+                                        class="customers-card__image"
+                                    />
+                                </picture>
+                                <div class="customers-card__username">
+                                    Cullen Bohannon
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customers-card">
+                            <p class="customers-card__text">
+                                “Sed ut perspiciatis unde omnis iste natus error
+                                sit voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam, eaque ipsa quae
+                                ab illo inventore veritatis et quasi ipsam
+                                voluptatem aspernatur.”
+                            </p>
+                            <div class="customers-card__user">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            /images/customers-2@1x.webp,
+                                            /images/customers-2@2x.webp 2x
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="/images/customers-2@1x.jpg"
+                                        srcset="/images/customers-2@2x.jpg 2x"
+                                        alt="Customer avatar"
+                                        class="customers-card__image"
+                                    />
+                                </picture>
+                                <div class="customers-card__username">
+                                    Jennifer Thomas
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="impact">
+                <div class="container">
+                    <div class="impact__wrapper">
+                        <h2
+                            class="
+                                impact__heading
+                                section-heading section-heading--light
+                            "
+                        >
+                            Our impact
+                        </h2>
+                        <div class="impact__subheading section-subheading">
+                            Nemo enim ipsam voluptatem quia voluptas
+                        </div>
+                        <picture>
+                            <source
+                                srcset="
+                                    /images/impact-1@1x.webp,
+                                    /images/impact-1@2x.webp 2x
+                                "
+                                type="image/webp"
+                            />
+                            <img
+                                src="/images/impact-1@1x.jpg"
+                                srcset="/images/impact-1@2x.jpg 2x"
+                                alt="Car"
+                                class="impact__image"
+                            />
+                        </picture>
+                        <div class="impact__stats">
+                            <div class="impact-item">
+                                <div class="impact-item__image">
+                                    <svg class="impact-item__icon">
+                                        <use
+                                            href="/icons/icon-sprite.svg#car-oil"
+                                        ></use>
+                                    </svg>
+                                </div>
+                                <div class="impact-item__info">
+                                    <div class="impact-item__value">16k+</div>
+                                    <div class="impact-item__description">
+                                        Oil changes
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="impact-item">
+                                <div class="impact-item__image">
+                                    <svg class="impact-item__icon">
+                                        <use
+                                            href="/icons/icon-sprite.svg#car-transmission"
+                                        ></use>
+                                    </svg>
+                                </div>
+                                <div class="impact-item__info">
+                                    <div class="impact-item__value">13k+</div>
+                                    <div class="impact-item__description">
+                                        Transmission repairs
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="impact-item">
+                                <div class="impact-item__image">
+                                    <svg class="impact-item__icon">
+                                        <use
+                                            href="/icons/icon-sprite.svg#car-alignment"
+                                        ></use>
+                                    </svg>
+                                </div>
+                                <div class="impact-item__info">
+                                    <div class="impact-item__value">15k+</div>
+                                    <div class="impact-item__description">
+                                        Alignments made
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="impact-item">
+                                <div class="impact-item__image">
+                                    <svg class="impact-item__icon">
+                                        <use
+                                            href="/icons/icon-sprite.svg#car-engine-2"
+                                        ></use>
+                                    </svg>
+                                </div>
+                                <div class="impact-item__info">
+                                    <div class="impact-item__value">
+                                        11,500+
+                                    </div>
+                                    <div class="impact-item__description">
+                                        Engines repaired
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="impact__appointment">
+                            <div class="impact__appointment-text">
+                                Sed do eiusmod tempor incididunt ut labore et
+                                dolore magna aliqua
+                            </div>
+                            <button
+                                class="impact__appointment-button button"
+                                data-trigger="appointment-modal"
+                            >
+                                <span class="button__text"
+                                    >Make an appointment</span
+                                >
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top">
+                    <div class="footer__col footer__col--about">
+                        <a href="/" class="footer__logo"
+                            ><img
+                                src="/images/logo-footer.png"
+                                alt="Company logo"
+                                class="footer__logo-image"
+                        /></a>
+                        <div class="footer__about">
+                            This is a blurb about the company sed do eiusmod
+                            tempor incididunt ut labore et dolore ex magna
+                            aliqua.
+                        </div>
+                        <div class="footer__socials">
+                            <a
+                                href="/"
+                                class="
+                                    footer__social-link
+                                    icon-button icon-button--bigger
+                                "
+                                aria-label="facebook"
+                            >
+                                <svg class="icon-button__icon">
+                                    <use
+                                        href="/icons/icon-sprite.svg#facebook"
+                                    ></use>
+                                </svg>
+                            </a>
+                            <a
+                                href="/"
+                                class="
+                                    footer__social-link
+                                    icon-button icon-button--bigger
+                                "
+                                aria-label="twitter"
+                            >
+                                <svg class="icon-button__icon">
+                                    <use
+                                        href="/icons/icon-sprite.svg#twitter"
+                                    ></use>
+                                </svg>
+                            </a>
+                            <a
+                                href="/"
+                                class="
+                                    footer__social-link
+                                    icon-button icon-button--bigger
+                                "
+                                aria-label="instagram"
+                            >
+                                <svg class="icon-button__icon">
+                                    <use
+                                        href="/icons/icon-sprite.svg#instagram"
+                                    ></use>
+                                </svg>
+                            </a>
+                            <a
+                                href="/"
+                                class="
+                                    footer__social-link
+                                    icon-button icon-button--bigger
+                                "
+                                aria-label="youtube"
+                            >
+                                <svg class="icon-button__icon">
+                                    <use
+                                        href="/icons/icon-sprite.svg#youtube"
+                                    ></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__col footer__col--links">
+                        <h3 class="footer__subheding">Explore links</h3>
+                        <div class="footer__links">
+                            <div class="footer__links-col">
+                                <a href="/" class="footer__link-item">About</a>
+                                <a href="/" class="footer__link-item"
+                                    >Services</a
+                                >
+                                <a href="/" class="footer__link-item"
+                                    >Specials</a
+                                >
+                                <a href="/" class="footer__link-item"
+                                    >Estimates</a
+                                >
+                            </div>
+                            <div class="footer__links-col">
+                                <a href="/" class="footer__link-item"
+                                    >Reviews</a
+                                >
+                                <a href="/" class="footer__link-item">Shop</a>
+                                <a href="/" class="footer__link-item"
+                                    >Careers</a
+                                >
+                                <a href="/" class="footer__link-item">FAQs</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__col footer__col--contacts">
+                        <h3 class="footer__subheding">Contact</h3>
+                        <ul class="footer__contacts-list">
+                            <li class="footer__contacts-item">
+                                <svg class="footer__contacts-icon">
+                                    <use
+                                        href="/icons/icon-sprite.svg#place"
+                                    ></use>
+                                </svg>
+                                <span class="footer__contacts-text"
+                                    >321 Pikes Place Parkway Seattle, WA
+                                    54321</span
+                                >
+                            </li>
+                            <li class="footer__contacts-item">
+                                <svg class="footer__contacts-icon">
+                                    <use
+                                        href="/icons/icon-sprite.svg#smartphone"
+                                    ></use>
+                                </svg>
+                                <a
+                                    href="tel:5557654321"
+                                    class="footer__contacts-link"
+                                    >(555) 765-4321</a
+                                >
+                            </li>
+                            <li class="footer__contacts-item">
+                                <svg class="footer__contacts-icon">
+                                    <use
+                                        href="/icons/icon-sprite.svg#email"
+                                    ></use>
+                                </svg>
+                                <a
+                                    href="mailto:info@company.com"
+                                    class="footer__contacts-link"
+                                    >Info@company.com</a
+                                >
+                            </li>
+                            <li class="footer__contacts-item">
+                                <svg class="footer__contacts-icon">
+                                    <use
+                                        href="/icons/icon-sprite.svg#alarm-clock"
+                                    ></use>
+                                </svg>
+                                <span class="footer__contacts-text"
+                                    >Mon - Sat: 7:00 am - 6:00 pm</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__bottom-wrapper">
+                        <span class="footer__tagline">
+                            Tagline lorem ipsum dolor sit amet, consectetur
+                            adipiscing eiusmod
+                        </span>
+                        <span class="footer__copyright">© 2018 Company.</span>
+                        <a href="/" class="footer__privacy-link"
+                            >Privacy Policy</a
+                        >
+                        <a href="/" class="footer__privacy-link"
+                            >Terms &amp; Conditions</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
