@@ -1,13 +1,12 @@
 import './menu/menu-handler';
 import './video/video-handler';
+import './counter/counter-handler';
 
 // import { modal } from './modal';
 // import { tabs } from './tabs';
-// import { counter } from './counter';
 
 document.addEventListener('DOMContentLoaded', () => {
     const INITIAL_TAB_IDX = 1;
-    const MAX_CUSTOMERS_COUNTER = 1000;
 
     // modal({
     //     modalSelector: '#appointment-modal',
@@ -22,11 +21,5 @@ document.addEventListener('DOMContentLoaded', () => {
     //     tabActiveClass: 'gallery__tab-button--active',
     //     tabItemActiveClass: 'gallery__item--active',
     //     initialTabIdx: INITIAL_TAB_IDX,
-    // });
-
-    // counter({
-    //     counterSelector: '#counter',
-    //     counterAnimationClass: 'appointment__counter-value--animate',
-    //     maxCounterValue: MAX_CUSTOMERS_COUNTER,
     // });
 });
