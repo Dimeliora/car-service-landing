@@ -354,17 +354,22 @@
                         </button>
                     </div>
                 </div>
-                <div class="video__modal modal" id="video-modal">
+                <div class="video__modal modal" data-video-modal>
                     <div class="modal__content">
                         <button
                             class="modal__close icon-button"
                             aria-label="Close modal"
+                            data-video-modal-close
                         >
                             <svg class="icon-button__icon">
                                 <use href="/icons/icon-sprite.svg#close"></use>
                             </svg>
                         </button>
-                        <div class="video__player" id="video-frame">
+                        <div
+                            class="video__player"
+                            id="video-frame"
+                            data-video-container
+                        >
                             <div class="video__error">
                                 <h2 class="video__error-title">Ошибка</h2>
                                 <p class="video__error-description">
