@@ -3,7 +3,7 @@
     padding-top: 25px;
     background: $font-dark url('/images/bg-header.webp') no-repeat 100% 0% /
         cover;
-    color: #fff;
+    color: #ffffff;
 
     @media (max-width: $sm) {
         background-position: 80% 0%;
@@ -25,7 +25,7 @@
         &--lower {
             height: 60px;
             padding: 0 40px;
-            background-color: #fff;
+            background-color: #ffffff;
 
             @media (max-width: $md) {
                 position: absolute;
@@ -50,7 +50,7 @@
                     z-index: 1000;
                     width: 0;
                     height: 90px;
-                    background-color: #02133c;
+                    background-color: $font-dark;
                     transition: width 0.2s ease-out;
                 }
             }
@@ -120,19 +120,19 @@
     }
 
     &__info-link {
-        color: #fff;
+        color: #ffffff;
         text-decoration: none;
         transition: color 0.2s ease-out;
 
-        &:focus,
+        &:focus-visible,
         &:hover {
             color: $red-dark;
         }
 
         @media (max-width: $lg) {
-            &:focus,
+            &:focus-visible,
             &:hover {
-                color: #fff;
+                color: #ffffff;
             }
         }
     }
@@ -165,7 +165,7 @@
                 display: block;
                 width: 100%;
                 height: 2px;
-                background-color: #fff;
+                background-color: #ffffff;
                 transform-origin: 0 0;
                 transition: all 0.2s ease-out;
 
@@ -205,40 +205,6 @@
         }
     }
 
-    &__submenu {
-        position: absolute;
-        top: 17px;
-        left: -10px;
-        min-width: 180px;
-        padding: 30px 10px 10px 10px;
-        background-color: #fff;
-        opacity: 0;
-        visibility: hidden;
-        list-style-type: none;
-        transform: translate(0, -7px);
-        transition: all 0.2s ease-out;
-        pointer-events: none;
-
-        &--visible {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: initial;
-            transform: translate(0, 0);
-        }
-
-        @media (max-width: $md) {
-            position: relative;
-            display: none;
-            width: 100%;
-            padding: 0 0 0 20px;
-            background-color: transparent;
-
-            &--visible {
-                display: block;
-            }
-        }
-    }
-
     &__menu-item {
         margin-right: 40px;
         color: $font-dark;
@@ -257,108 +223,11 @@
         }
 
         &--dropdown {
-            position: relative;
-            display: flex;
-            align-items: center;
             margin-right: 30px;
 
             &:last-child {
                 margin-right: 0;
             }
-
-            &:hover {
-                .header__submenu {
-                    opacity: 1;
-                    visibility: visible;
-                    pointer-events: initial;
-                    transform: translate(0, 0);
-                }
-            }
-
-            @media (max-width: $md) {
-                align-items: flex-start;
-                flex-wrap: wrap;
-            }
-        }
-    }
-
-    &__submenu-item {
-        margin-bottom: 15px;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-        @media (max-width: $md) {
-            margin-bottom: 10px;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-
-            .header__link {
-                font-size: 1.2rem;
-            }
-        }
-    }
-
-    &__submenu-expand-button {
-        position: relative;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 15px;
-        height: 15px;
-        margin-left: 5px;
-        border: none;
-        background-color: transparent;
-        padding: 0;
-        pointer-events: none;
-
-        &:after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(0);
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: rgba(198, 12, 12, 0.1);
-            transition: transform 0.2s ease-out;
-        }
-
-        &:focus {
-            &::after {
-                transform: translate(-50%, -50%) scale(1);
-
-                @media (max-width: $lg) {
-                    transform: translate(-50%, -50%) scale(0);
-                }
-            }
-        }
-
-        @media (max-width: $md) {
-            width: 25px;
-            height: 25px;
-            pointer-events: initial;
-            transition: transform 0.2s ease-out;
-        }
-
-        &--active {
-            transform: rotate(180deg);
-        }
-    }
-
-    &__submenu-expand-icon {
-        width: 8px;
-        height: 5px;
-        fill: $red-dark;
-
-        @media (max-width: $md) {
-            width: 13px;
-            height: 10px;
-            fill: #fff;
         }
     }
 
@@ -369,13 +238,13 @@
         text-decoration: none;
         transition: color 0.2s ease-out;
 
-        &:focus,
+        &:focus-visible,
         &:hover {
             color: $red-dark;
         }
 
         @media (max-width: $lg) {
-            &:focus,
+            &:focus-visible,
             &:hover {
                 color: $font-dark;
             }
@@ -383,11 +252,11 @@
 
         @media (max-width: $md) {
             width: auto;
-            color: #fff;
+            color: #ffffff;
 
-            &:focus,
+            &:focus-visible,
             &:hover {
-                color: #fff;
+                color: #ffffff;
             }
         }
     }
@@ -406,14 +275,14 @@
         margin-right: 25px;
 
         .icon-button__icon {
-            fill: #4b4b4b;
+            fill: $font-gray;
         }
 
         @media (max-width: $md) {
             margin-right: 45px;
 
             .icon-button__icon {
-                fill: #fff;
+                fill: #ffffff;
             }
         }
 

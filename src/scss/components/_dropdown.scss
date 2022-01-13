@@ -1,0 +1,111 @@
+.dropdown {
+    position: relative;
+
+    &:hover,
+    &:focus-visible,
+    &:focus-within {
+        .dropdown__title {
+            color: $red-dark;
+
+            @media (max-width: $md) {
+                color: #ffffff;
+            }
+        }
+
+        .dropdown__icon {
+            transform: rotate(180deg);
+        }
+
+        .dropdown__list {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: initial;
+            transform: translate(0, 0);
+
+            @media (max-width: $md) {
+                display: block;
+            }
+        }
+    }
+
+    &:focus,
+    &:focus-visible {
+        outline: none;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+        margin-right: 10px;
+        color: $font-dark;
+        font-size: 1.4rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: color 0.2s ease-out;
+
+        @media (max-width: $md) {
+            color: #ffffff;
+            font-size: 2rem;
+        }
+    }
+
+    &__icon {
+        width: 8px;
+        height: 5px;
+        fill: $red-dark;
+        transition: transform 0.2s ease-out;
+
+        @media (max-width: $md) {
+            width: 13px;
+            height: 10px;
+            fill: #ffffff;
+        }
+    }
+
+    &__list {
+        position: absolute;
+        top: 17px;
+        left: -10px;
+        min-width: 180px;
+        padding: 30px 10px 10px 10px;
+        background-color: #ffffff;
+        opacity: 0;
+        visibility: hidden;
+        list-style-type: none;
+        transform: translate(0, -7px);
+        transition: all 0.2s ease-out;
+        pointer-events: none;
+
+        @media (max-width: $md) {
+            position: static;
+            display: none;
+            width: 100%;
+            margin-top: 10px;
+            padding: 0 0 0 20px;
+            background-color: transparent;
+        }
+    }
+
+    &__list-item {
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: $md) {
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .header__link {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

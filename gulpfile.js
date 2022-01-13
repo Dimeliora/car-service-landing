@@ -135,7 +135,6 @@ const svg = () =>
                                 plugins: [
                                     { removeViewBox: false },
                                     { cleanupIDs: false },
-                                    { removeAttrs: { attrs: '(fill|stroke)' } },
                                 ],
                             },
                         },

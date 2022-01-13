@@ -72,66 +72,62 @@
                         <button
                             class="header__menu-button"
                             aria-label="Menu button"
+                            data-menu-button
                         >
                             <span></span>
                             <span></span>
                             <span></span>
                         </button>
                     </div>
-                    <nav
-                        class="header__row header__row--lower"
-                        id="header-menu"
-                    >
+                    <nav class="header__row header__row--lower" data-menu>
                         <ul class="header__menu">
                             <li
-                                class="
-                                    header__menu-item
-                                    header__menu-item--dropdown
-                                "
+                                class="header__menu-item header__menu-item--dropdown"
                             >
-                                <a href="/" class="header__link">Services</a>
-                                <button
-                                    class="header__submenu-expand-button"
-                                    aria-label="Expand menu"
-                                >
-                                    <svg class="header__submenu-expand-icon">
-                                        <use
-                                            href="/icons/icon-sprite.svg#expand"
-                                        ></use>
-                                    </svg>
-                                </button>
-                                <ul class="header__submenu">
-                                    <li class="header__submenu-item">
-                                        <a href="/" class="header__link"
-                                            >Multi Point Inspections
-                                        </a>
-                                    </li>
-                                    <li class="header__submenu-item">
-                                        <a href="/" class="header__link"
-                                            >Auto Repair</a
-                                        >
-                                    </li>
-                                    <li class="header__submenu-item">
-                                        <a href="/" class="header__link"
-                                            >Auto Maintenance</a
-                                        >
-                                    </li>
-                                    <li class="header__submenu-item">
-                                        <a href="/" class="header__link"
-                                            >Tires
-                                        </a>
-                                    </li>
-                                    <li class="header__submenu-item">
-                                        <a href="/" class="header__link"
-                                            >Service Warranty</a
-                                        >
-                                    </li>
-                                    <li class="header__submenu-item">
-                                        <a href="/" class="header__link"
-                                            >Shop Online</a
-                                        >
-                                    </li>
-                                </ul>
+                                <div class="dropdown" tabindex="0">
+                                    <div class="dropdown__header">
+                                        <span class="dropdown__title">
+                                            Services
+                                        </span>
+                                        <svg class="dropdown__icon">
+                                            <use
+                                                href="/icons/icon-sprite.svg#expand"
+                                            ></use>
+                                        </svg>
+                                    </div>
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__list-item">
+                                            <a href="/" class="header__link"
+                                                >Multi Point Inspections
+                                            </a>
+                                        </li>
+                                        <li class="dropdown__list-item">
+                                            <a href="/" class="header__link"
+                                                >Auto Repair</a
+                                            >
+                                        </li>
+                                        <li class="dropdown__list-item">
+                                            <a href="/" class="header__link"
+                                                >Auto Maintenance</a
+                                            >
+                                        </li>
+                                        <li class="dropdown__list-item">
+                                            <a href="/" class="header__link"
+                                                >Tires
+                                            </a>
+                                        </li>
+                                        <li class="dropdown__list-item">
+                                            <a href="/" class="header__link"
+                                                >Service Warranty</a
+                                            >
+                                        </li>
+                                        <li class="dropdown__list-item">
+                                            <a href="/" class="header__link"
+                                                >Shop Online</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                             <li class="header__menu-item">
                                 <a href="/" class="header__link">Specials</a>
@@ -143,54 +139,52 @@
                                 <a href="/" class="header__link">Reviews</a>
                             </li>
                             <li
-                                class="
-                                    header__menu-item
-                                    header__menu-item--dropdown
-                                "
+                                class="header__menu-item header__menu-item--dropdown"
                             >
-                                <a href="/" class="header__link">Shop</a>
-                                <button
-                                    class="header__submenu-expand-button"
-                                    aria-label="Expand menu"
-                                >
-                                    <svg class="header__submenu-expand-icon">
-                                        <use
-                                            href="/icons/icon-sprite.svg#expand"
-                                        ></use>
-                                    </svg>
-                                </button>
-                                <ul class="header__submenu">
-                                    <li class="header__submenu-item">
-                                        <a href="/" class="header__link"
-                                            >Product category #1</a
-                                        >
-                                    </li>
-                                    <li class="header__submenu-item">
-                                        <a href="/" class="header__link"
-                                            >Product category #2</a
-                                        >
-                                    </li>
-                                    <li class="header__submenu-item">
-                                        <a href="/" class="header__link"
-                                            >Product category #3</a
-                                        >
-                                    </li>
-                                    <li class="header__submenu-item">
-                                        <a href="/" class="header__link"
-                                            >Product category #4</a
-                                        >
-                                    </li>
-                                    <li class="header__submenu-item">
-                                        <a href="/" class="header__link"
-                                            >Product category #5</a
-                                        >
-                                    </li>
-                                    <li class="header__submenu-item">
-                                        <a href="/" class="header__link"
-                                            >Product category #6</a
-                                        >
-                                    </li>
-                                </ul>
+                                <div class="dropdown" tabindex="0">
+                                    <div class="dropdown__header">
+                                        <span class="dropdown__title">
+                                            Products
+                                        </span>
+                                        <svg class="dropdown__icon">
+                                            <use
+                                                href="/icons/icon-sprite.svg#expand"
+                                            ></use>
+                                        </svg>
+                                    </div>
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__list-item">
+                                            <a href="/" class="header__link"
+                                                >Product Name #1
+                                            </a>
+                                        </li>
+                                        <li class="dropdown__list-item">
+                                            <a href="/" class="header__link"
+                                                >Product Name #2</a
+                                            >
+                                        </li>
+                                        <li class="dropdown__list-item">
+                                            <a href="/" class="header__link"
+                                                >Product Name #3</a
+                                            >
+                                        </li>
+                                        <li class="dropdown__list-item">
+                                            <a href="/" class="header__link"
+                                                >Product Name #4
+                                            </a>
+                                        </li>
+                                        <li class="dropdown__list-item">
+                                            <a href="/" class="header__link"
+                                                >Product Name #5</a
+                                            >
+                                        </li>
+                                        <li class="dropdown__list-item">
+                                            <a href="/" class="header__link"
+                                                >Product Name #6</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                             <li class="header__menu-item">
                                 <a href="/" class="header__link">About</a>
@@ -652,29 +646,17 @@
                         <div class="gallery__tabs">
                             <button class="gallery__tab-button">Gallery</button>
                             <button
-                                class="
-                                    gallery__tab-button
-                                    gallery__tab-button--active
-                                    gallery__tab-button--stream
-                                    gallery__tab-button--online
-                                "
+                                class="gallery__tab-button gallery__tab-button--active gallery__tab-button--stream gallery__tab-button--online"
                             >
                                 Live stream: Bay 1
                             </button>
                             <button
-                                class="
-                                    gallery__tab-button
-                                    gallery__tab-button--stream
-                                    gallery__tab-button--online
-                                "
+                                class="gallery__tab-button gallery__tab-button--stream gallery__tab-button--online"
                             >
                                 Live stream: Bay 2
                             </button>
                             <button
-                                class="
-                                    gallery__tab-button
-                                    gallery__tab-button--stream
-                                "
+                                class="gallery__tab-button gallery__tab-button--stream"
                             >
                                 Live stream: Bay 3
                             </button>
@@ -826,10 +808,7 @@
                 <div class="container">
                     <div class="impact__wrapper">
                         <h2
-                            class="
-                                impact__heading
-                                section-heading section-heading--light
-                            "
+                            class="impact__heading section-heading section-heading--light"
                         >
                             Our impact
                         </h2>
@@ -951,10 +930,7 @@
                         <div class="footer__socials">
                             <a
                                 href="/"
-                                class="
-                                    footer__social-link
-                                    icon-button icon-button--bigger
-                                "
+                                class="footer__social-link icon-button icon-button--bigger"
                                 aria-label="facebook"
                             >
                                 <svg class="icon-button__icon">
@@ -965,10 +941,7 @@
                             </a>
                             <a
                                 href="/"
-                                class="
-                                    footer__social-link
-                                    icon-button icon-button--bigger
-                                "
+                                class="footer__social-link icon-button icon-button--bigger"
                                 aria-label="twitter"
                             >
                                 <svg class="icon-button__icon">
@@ -979,10 +952,7 @@
                             </a>
                             <a
                                 href="/"
-                                class="
-                                    footer__social-link
-                                    icon-button icon-button--bigger
-                                "
+                                class="footer__social-link icon-button icon-button--bigger"
                                 aria-label="instagram"
                             >
                                 <svg class="icon-button__icon">
@@ -993,10 +963,7 @@
                             </a>
                             <a
                                 href="/"
-                                class="
-                                    footer__social-link
-                                    icon-button icon-button--bigger
-                                "
+                                class="footer__social-link icon-button icon-button--bigger"
                                 aria-label="youtube"
                             >
                                 <svg class="icon-button__icon">
