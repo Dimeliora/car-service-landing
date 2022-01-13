@@ -1,38 +1,36 @@
-import { getScrollWidth } from "./helpers/getScrollWidth";
+import { getScrollWidth } from './helpers/getScrollWidth';
 
 export const modal = ({
-	modalSelector,
-	modalTriggersSelector,
-	modalCloseButtonSelector,
-	modalActiveClass,
+    modalSelector,
+    modalTriggersSelector,
+    modalCloseButtonSelector,
+    modalActiveClass,
 }) => {
-	const modalElm = document.querySelector(modalSelector);
-	const openModalButtons = document.querySelectorAll(modalTriggersSelector);
-	const closeButton = document.querySelector(modalCloseButtonSelector);
+    const modalElm = document.querySelector(modalSelector);
+    const openModalButtons = document.querySelectorAll(modalTriggersSelector);
+    const closeButton = document.querySelector(modalCloseButtonSelector);
 
-	if (modalElm && openModalButtons) {
-		const scrollWidth = getScrollWidth();
+    const scrollWidth = getScrollWidth();
 
-		const closeHandler = () => {
-			modalElm.classList.remove(modalActiveClass);
-			document.body.style.removeProperty("overflow");
-			document.body.style.removeProperty("margin-right");
-		};
+    const closeHandler = () => {
+        modalElm.classList.remove(modalActiveClass);
+        document.body.style.removeProperty('overflow');
+        document.body.style.removeProperty('margin-right');
+    };
 
-		modalElm.addEventListener("click", (e) => {
-			if (e.target === modalElm) {
-				closeHandler();
-			}
-		});
+    modalElm.addEventListener('click', (e) => {
+        if (e.target === modalElm) {
+            closeHandler();
+        }
+    });
 
-		closeButton.addEventListener("click", closeHandler);
+    closeButton.addEventListener('click', closeHandler);
 
-		openModalButtons.forEach((button) => {
-			button.addEventListener("click", () => {
-				modalElm.classList.add(modalActiveClass);
-				document.body.style.setProperty("overflow", "hidden");
-				document.body.style.setProperty("margin-right", `${scrollWidth}px`);
-			});
-		});
-	}
+    openModalButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            modalElm.classList.add(modalActiveClass);
+            document.body.style.setProperty('overflow', 'hidden');
+            document.body.style.setProperty('margin-right', `${scrollWidth}px`);
+        });
+    });
 };
